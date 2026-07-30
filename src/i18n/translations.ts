@@ -75,7 +75,7 @@ export const ui = {
     "cases": [
       { title: "Architettura & Henné Sopracciglia", subtitle: "Studio del visagismo, sagomatura di precisione e sfumatura naturale all'henné bio per uno sguardo armonico ed intenso." },
       { title: "Combo Sguardo: Architettura, Henné & Extension Ciglia", subtitle: "Architettura e sagomatura sopracciglia con sfumatura bio-henné abbinata ad impianto extension ciglia per una trasformazione dello sguardo a 360°." },
-      { title: "Ricostruzione & Visagismo Sopracciglia", subtitle: "Simmetria facciale e ripristino della densità dello sguardo con tecniche combinate di precisione." },
+      { title: "Architettura & Bio-Henné Sopracciglia", subtitle: "Mappatura geometrica del viso, sagomatura di precisione e riempimento bio-henné per ridefinire ed intensificare le sopracciglia naturali." },
       { title: "Laminazione Ciglia + Tinta Scura", subtitle: "Lifting naturale, curvatura cheratinica profonda e colorazione scura intensa." },
       { title: "Correzione Tonalità & Forma Sopracciglia", subtitle: "Perfezionamento sopracciglia diradate con pigmentazione organica avanzata." },
       { title: "Design Integrale Sguardo & Ciglia", subtitle: "Armonizzazione estetica completa del contorno occhi e dell'arcata sopraccigliare." }
@@ -150,7 +150,7 @@ export const ui = {
     "cases": [
       { title: "Arquitectura y Henna de Cejas", subtitle: "Estudio de visagismo, diseño de alta precisión y sombreado natural con henna orgánica para una mirada armónica e intensa." },
       { title: "Combo Mirada: Arquitectura, Henna y Extensión de Pestañas", subtitle: "Arquitectura y perfilado de cejas con tinte de henna orgánica combinado con extensión de pestañas para una transformación completa del rostro." },
-      { title: "Reconstrucción & Visagismo de Cejas", subtitle: "Simetría facial y restauración de la densidad de la mirada con técnicas combinadas de precisión." },
+      { title: "Arquitectura y Bio-Henna de Cejas", subtitle: "Mapeo geométrico facial, perfilado de alta precisión y sombreado con henna orgánica para redefinir e intensificar las cejas naturales." },
       { title: "Laminado de Pestañas + Tinte Oscuro", subtitle: "Lifting natural, curvatura queratínica profunda y coloración oscura intensa." },
       { title: "Corrección de Tono & Forma de Cejas", subtitle: "Perfeccionamiento de cejas despobladas con pigmentación orgánica avanzada." },
       { title: "Diseño Integral de Mirada & Pestañas", subtitle: "Armonización estética completa del contorno de ojos y del arco superciliar." }
@@ -225,7 +225,7 @@ export const ui = {
     "cases": [
       { title: "Brow Architecture & Henna Design", subtitle: "Tailored facial mapping, precision eyebrow shaping, and organic henna tinting for a defined, harmonized look." },
       { title: "Full Eye Combo: Brow Architecture, Henna & Lash Extensions", subtitle: "Precision brow mapping, organic henna tinting, and volume lash extensions combined for a complete 360° eye transformation." },
-      { title: "Brow Reconstruction & Visagism", subtitle: "Facial symmetry and restoration of brow density using combined precision techniques." },
+      { title: "Brow Architecture & Organic Henna Mapping", subtitle: "Precision facial geometric mapping, brow shaping, and organic henna tinting to restore density and define natural eyebrows." },
       { title: "Lash Lamination + Dark Tint", subtitle: "Natural lash lift, deep keratin curl enhancement, and intense dark tinting." },
       { title: "Brow Tone & Shape Correction", subtitle: "Sparse brow enhancement using advanced organic pigmentation." },
       { title: "Full Eye & Lash Design", subtitle: "Complete aesthetic harmonization of eye contour and brow arch." }
