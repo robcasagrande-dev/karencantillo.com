@@ -1,0 +1,531 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BeforeAfterSlider from '../components/BeforeAfterSlider.astro';
+
+const beforeAfterCases = [
+  {
+    beforeImg: "/images/Client1Before.jpg",
+    afterImg: "/images/Client1After.jpg",
+    title: "Microblading Hiperrealista",
+    subtitle: "Definición y relleno pelo a pelo adaptado a la forma natural del rostro."
+  },
+  {
+    beforeImg: "/images/Client2Before.jpg",
+    afterImg: "/images/Client2After.jpg",
+    title: "Powder Brows (Efecto Polvo)",
+    subtitle: "Sombreado degradado con apariencia de maquillaje suave y duradero."
+  },
+  {
+    beforeImg: "/images/Client3Before.jpg",
+    afterImg: "/images/Client3After.jpg",
+    title: "Reconstrucción & Visagismo",
+    subtitle: "Simetría facial y restauración de densidad para una mirada rejuvenecida."
+  },
+  {
+    beforeImg: "/images/Client4Before.jpg",
+    afterImg: "/images/Client4After.jpg",
+    title: "Micropigmentación de Labios",
+    subtitle: "Coloración sutil, corrección de tono e iluminación del contorno labial."
+  },
+  {
+    beforeImg: "/images/Client5Before.jpg",
+    afterImg: "/images/Client5After.jpg",
+    title: "Corrección de Tono & Densidad",
+    subtitle: "Perfeccionamiento de cejas despobladas con pigmentos orgánicos Premium."
+  },
+  {
+    beforeImg: "/images/Client6Before.jpg",
+    afterImg: "/images/Client6After.jpg",
+    title: "Diseño & Perfilado Integral",
+    subtitle: "Armonización estética de rasgos faciales mediante técnicas combinadas."
+  }
+];
+---
+
+<Layout title="Karen Cantillo | Especialista en Micropigmentación & PMU Studio">
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="section-subtitle">MICROPIGMENTACIÓN & ESTÉTICA FACIAL</span>
+        <h1 class="hero-title">
+          Arte & Precision en tu <span class="text-gradient">Mirada Natural</span>
+        </h1>
+        <p class="hero-description">
+          Realza tu belleza facial con técnicas avanzadas de <strong>Microblading</strong>, <strong>Powder Brows</strong> y <strong>Micropigmentación de Labios</strong>. Diseños personalizados mediante visagismo profesional que armonizan perfectamente con tus rasgos.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/?text=Hola%20Karen,%20deseo%20agendar%20una%20valoraci%C3%B3n" class="btn-primary" target="_blank" rel="noopener">
+            Agendar Valoración
+          </a>
+          <a href="#transformaciones" class="btn-secondary">
+            Ver Resultados
+          </a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="badge-item">
+            <span class="badge-number">100%</span>
+            <span class="badge-text">Pigmentos Premium</span>
+          </div>
+          <div class="badge-item">
+            <span class="badge-number">1.5 - 3 yrs</span>
+            <span class="badge-text">Durabilidad Promedio</span>
+          </div>
+          <div class="badge-item">
+            <span class="badge-number">VIP</span>
+            <span class="badge-text">Atención Personalizada</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-image-frame glass-card">
+          <img src="/images/Client1After.jpg" alt="Karen Cantillo - Micropigmentación de Cejas" class="hero-img" />
+          <div class="hero-image-tag">
+            <span class="tag-title">Resultado Real</span>
+            <span class="tag-sub">Microblading & Visagismo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS DESTACADOS -->
+  <section id="servicios" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">NUESTROS TRATAMIENTOS</span>
+        <h2 class="section-title">Especialidades en <span class="text-gradient">Permanent Make-Up</span></h2>
+        <p class="section-description">
+          Procedimientos diseñados para potenciar tus rasgos sin perder la frescura y elegancia de tu apariencia cotidiana.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass-card">
+          <div class="service-icon">✨</div>
+          <h3>Microblading Pelo a Pelo</h3>
+          <p>Técnica manual hiperrealista que recrea cada vello de la ceja con extrema precisión. Ideal para rellenar vacíos, dar forma y definir el marco de la mirada.</p>
+          <ul class="service-benefits">
+            <li>Acabado 100% natural</li>
+            <li>Visagismo personalizado</li>
+            <li>Pigmentos orgánicos Hipoalergénicos</li>
+          </ul>
+        </div>
+
+        <div class="service-card glass-card">
+          <div class="service-icon">👑</div>
+          <h3>Powder Brows (Efecto Polvo)</h3>
+          <p>Sombreado sutil con dermógrafo que simula el maquillaje suave. Aporta volumen y definición con un degradado elegante desde la cabeza hasta la cola de la ceja.</p>
+          <ul class="service-benefits">
+            <li>Apto para todo tipo de piel</li>
+            <li>Mayor fijación y durabilidad</li>
+            <li>Efecto maquillaje diario impecable</li>
+          </ul>
+        </div>
+
+        <div class="service-card glass-card">
+          <div class="service-icon">💋</div>
+          <h3>Lip Blush (Micropigmentación Labial)</h3>
+          <p>Tratamiento que devuelve el rubor natural a los labios, corrige tonos pálidos o asimétricos y brinda una ilusión óptica de mayor volumen y frescura.</p>
+          <ul class="service-benefits">
+            <li>Definición del perfil labial</li>
+            <li>Corrección de tonalidad</li>
+            <li>Coloración natural duradera</li>
+          </ul>
+        </div>
+
+        <div class="service-card glass-card">
+          <div class="service-icon">👁️</div>
+          <h3>Delineado Eyeliner Permanent</h3>
+          <p>Micropigmentación en la línea de pestañas para intensificar la mirada y crear un efecto visual de mayor densidad sin necesidad de maquillaje diario.</p>
+          <ul class="service-benefits">
+            <li>Mirada expresiva y descansada</li>
+            <li>Resistente al agua y sudor</li>
+            <li>Trazos finos y delicados</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTES Y DESPUÉS / TRANSFORMACIONES -->
+  <section id="transformaciones" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">RESULTADOS REALES</span>
+        <h2 class="section-title">Galería <span class="text-gradient">Antes & Después</span></h2>
+        <p class="section-description">
+          Desliza la barra para comparar la transformación y el nivel de detalle alcanzado en cada paciente.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        {beforeAfterCases.map(item => (
+          <BeforeAfterSlider 
+            beforeImg={item.beforeImg} 
+            afterImg={item.afterImg} 
+            title={item.title} 
+            subtitle={item.subtitle} 
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE VIDEOS EN VIVO -->
+  <section id="videos" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">EN ACCIÓN</span>
+        <h2 class="section-title">Demostración <span class="text-gradient">en Video</span></h2>
+        <p class="section-description">
+          Observa de cerca la precisión, bioseguridad y acabado impecable durante la sesión de tratamiento.
+        </p>
+      </div>
+
+      <div class="video-grid">
+        <div class="video-card glass-card">
+          <video controls poster="/images/ClientInProcess.jpg" class="showcase-video">
+            <source src="/videos/ClientVideo1.mp4" type="video/mp4" />
+            Tu navegador no soporta reproducción de video HTML5.
+          </video>
+          <div class="video-info">
+            <h4>Proceso de Micropigmentación en Vivo</h4>
+            <p>Trazo fino y controlado garantizando máxima comodidad y cicatrización perfecta.</p>
+          </div>
+        </div>
+
+        <div class="video-card glass-card">
+          <video controls poster="/images/Client7.jpg" class="showcase-video">
+            <source src="/videos/ClientVideo2.mp4" type="video/mp4" />
+            Tu navegador no soporta reproducción de video HTML5.
+          </video>
+          <div class="video-info">
+            <h4>Resultado Final & Detalle de Simetría</h4>
+            <p>Apreciación del color recién implantado con acabado difuminado e higiénico.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / SOBRE KAREN CANTILLO -->
+  <section id="nosotros" class="section section-alt">
+    <div class="container about-container">
+      <div class="about-image glass-card">
+        <img src="/images/ClientInProcess.jpg" alt="Karen Cantillo Especialista" class="about-img" />
+      </div>
+      <div class="about-content">
+        <span class="section-subtitle">CONOCE A LA ESPECIALISTA</span>
+        <h2 class="section-title">Pasión por la <span class="text-gradient">Perfección Estética</span></h2>
+        <p class="about-text">
+          Con amplia trayectoria en el área del maquillaje permanente y la estética facial, <strong>Karen Cantillo</strong> combina un enfoque artístico con las técnicas de micropigmentación más modernas del sector.
+        </p>
+        <p class="about-text">
+          Cada rostro es único. Por ello, cada procedimiento se inicia con un minucioso estudio de <em>visagismo facial</em> para determinar la forma, simetría y colorimetría exactas que se adapten a tu tono de piel y estilo personal.
+        </p>
+
+        <div class="about-features">
+          <div class="feature-box">
+            <h4>Bioseguridad Estricta</h4>
+            <p>Materiales 100% desechables de grado médico y normas de asepsia rigorously controladas.</p>
+          </div>
+          <div class="feature-box">
+            <h4>Pigmentos Orgánicos</h4>
+            <p>Fórmulas libres de metales pesados que no migran ni cambian a tonalidades no deseadas.</p>
+          </div>
+        </div>
+
+        <a href="https://wa.me/?text=Hola%20Karen,%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20de%20agenda" class="btn-primary" target="_blank" rel="noopener">
+          Solicitar Diagnóstico Sin Costo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contacto" class="section cta-section">
+    <div class="container cta-container glass-card">
+      <span class="section-subtitle">AGENDA TU ESPACIO</span>
+      <h2>Transforma tu Mirada con la Máxima Elegancia</h2>
+      <p>Reserva tu cita hoy mismo para una valoración personalizada y descubre el diseño ideal para tus cejas y labios.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/?text=Hola%20Karen,%20quiero%20reservar%20mi%20cita" class="btn-primary" target="_blank" rel="noopener">
+          Contactar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    padding: 160px 0 100px;
+    position: relative;
+  }
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 3.8rem;
+    margin-bottom: 24px;
+  }
+
+  .hero-description {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  .hero-badges {
+    display: flex;
+    gap: 35px;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 30px;
+  }
+
+  .badge-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .badge-number {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+  }
+
+  .badge-text {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .hero-image-frame {
+    position: relative;
+    padding: 12px;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    display: block;
+  }
+
+  .hero-image-tag {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(11, 10, 14, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-glass);
+    padding: 12px 20px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tag-title {
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+  }
+
+  .tag-sub {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+
+  /* Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+
+  .service-card {
+    padding: 35px 30px;
+  }
+
+  .service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+    color: var(--text-primary);
+  }
+
+  .service-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .service-benefits {
+    list-style: none;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 16px;
+  }
+
+  .service-benefits li {
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .service-benefits li::before {
+    content: "✓";
+  }
+
+  /* Gallery Section */
+  .section-alt {
+    background: rgba(255, 255, 255, 0.015);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 30px;
+  }
+
+  /* Video Grid */
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+  }
+
+  .showcase-video {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+    background: #000;
+  }
+
+  .video-info {
+    padding: 24px;
+  }
+
+  .video-info h4 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+  }
+
+  .video-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+
+  /* About Container */
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .about-image {
+    padding: 12px;
+  }
+
+  .about-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+  }
+
+  .about-text {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
+
+  .about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .feature-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    padding: 20px;
+    border-radius: var(--radius-sm);
+  }
+
+  .feature-box h4 {
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .feature-box p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  /* CTA Section */
+  .cta-container {
+    text-align: center;
+    padding: 80px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cta-container h2 {
+    font-size: 2.8rem;
+    margin-bottom: 16px;
+  }
+
+  .cta-container p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 36px;
+  }
+
+  @media (max-width: 992px) {
+    .hero-container, .about-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .hero-title {
+      font-size: 2.8rem;
+    }
+    .gallery-grid, .video-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

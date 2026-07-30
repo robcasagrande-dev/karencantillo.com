@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Production output
+dist/
+
+# Build and temp files
+.astro/
+.DS_Store
+
+# Environment variables
+.env
+.env.*
