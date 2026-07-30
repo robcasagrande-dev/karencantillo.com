@@ -349,6 +349,39 @@ const instagramPosts = [
     </div>
   </section>
 
+  <!-- FAQ SECTION (LOCAL SEO & RICH SNIPPETS) -->
+  <section id="faq" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">{t["faq.subtitle"]}</span>
+        <h2 class="section-title">{t["faq.title1"]} <span class="text-gradient">{t["faq.title2"]}</span></h2>
+        <p class="section-description">{t["faq.desc"]}</p>
+      </div>
+
+      <div class="faq-grid">
+        {t.faqs && t.faqs.map((faq: { q: string; a: string }) => (
+          <div class="faq-card glass-card">
+            <h3 class="faq-question">❓ {faq.q}</h3>
+            <p class="faq-answer">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": t.faqs ? t.faqs.map((faq: { q: string; a: string }) => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      })) : []
+    })} />
+  </section>
+
   <!-- CTA FINAL -->
   <section class="section cta-section">
     <div class="container cta-container glass-card">
@@ -646,6 +679,39 @@ const instagramPosts = [
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 30px;
+  }
+
+  /* FAQ Section */
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .faq-card {
+    padding: 28px;
+    border-radius: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .faq-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-gold);
+  }
+
+  .faq-question {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
   }
 
   /* CTA Section */
