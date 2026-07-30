@@ -21,8 +21,8 @@ export const ui = {
     "hero.desc": "Studio specializzato in Extension Ciglia, Laminazione Ciglia & Sopracciglia, e Depilazione Viso a Filo Arabo a Monteverde Nuovo, Roma. Trattamenti clinici di precisione e visagismo personalizzato.",
     "hero.btn.whatsapp": "Prenota su WhatsApp",
     "hero.btn.prices": "Consulta Listino Prezzi",
-    "hero.badge1.val": "48 Ore",
-    "hero.badge1.lbl": "Patch Test Obbligatorio",
+    "hero.badge1.val": "Su Richiesta",
+    "hero.badge1.lbl": "Patch Test Preventivo",
     "hero.badge2.val": "20°-25°C",
     "hero.badge2.lbl": "Umidità Controllata",
     "hero.badge3.val": "Roma",
@@ -36,9 +36,9 @@ export const ui = {
     "clinic.title1": "Eccellenza Clinica &",
     "clinic.title2": "Biosegurezza",
     "clinic.desc": "La salute della tua pelle e dei tuoi occhi è il nostro primo requisito professionale.",
-    "clinic.patch.title": "Patch Test Obbligatorio (48h Prima)",
-    "clinic.patch.desc": "Per la tua sicurezza e la massima eccellenza clinica, effettuiamo un test epicutaneo (Patch Test) obbligatorio almeno 48 ore prima della prima seduta per extension (adesivi cianocrilati) o trattamenti henné/tinte per prevenire qualsiasi allergia.",
-    "clinic.patch.tag": "Marchio di Protezione & Qualità",
+    "clinic.patch.title": "Patch Test Preventivo (Su Richiesta / 48h)",
+    "clinic.patch.desc": "Per la tua massima sicurezza clinica, su richiesta o previa valutazione preventiva (almeno 48 ore prima della seduta), effettuiamo un test epicutaneo allergologico per adesivi (cianocrilati) o trattamenti henné/tinte.",
+    "clinic.patch.tag": "Servizio Disponibile & Biosegurezza",
     "clinic.chem.title": "Chimica del Cianocrilato & Umidità",
     "clinic.chem.desc": "La polimerizzazione del cianocrilato puro richiede condizioni microambientali controllate di umidità e temperatura per garantire massima ritenzione e assenza di esalazioni irritanti.",
 
@@ -47,7 +47,7 @@ export const ui = {
     "pricing.title2": "Trattamenti",
     "pricing.desc": "Seleziona il trattamento desiderato e clicca sul pulsante di prenotazione diretta WhatsApp.",
     "pricing.th.treatment": "Trattamento",
-    "pricing.th.area": "Zona",
+    "pricing.th.area": "Area",
     "pricing.th.first": "Primo Impianto",
     "pricing.th.touchup": "Ritocco (3 sett.)",
     "pricing.th.price": "Prezzo",
@@ -78,7 +78,7 @@ export const ui = {
       { title: "Architettura & Bio-Henné Sopracciglia", subtitle: "Mappatura geometrica del viso, sagomatura di precisione e riempimento bio-henné per ridefinire ed intensificare le sopracciglia naturali." },
       { title: "Micropigmentazione & Visagismo Sopracciglia", subtitle: "Definizione tridimensionale dell'arcata sopraccigliare con pigmenti bioriassorbibili per ripristinare simmetria e densità naturale." },
       { title: "Depilazione a Filo, Architettura & Bio-Henné", subtitle: "Definizione dell'arcata con filo arabo di precisione, studio visagistico e sfumatura naturale all'henné bio." },
-      { title: "Extension Ciglia Volume Scenografico", subtitle: "Volume personalizzato a ventaglio per intensificare la profondità dello sguardo con la massima leggerezza." }
+      { title: "Laminazione Sopracciglia & Visagismo Maturo", subtitle: "Riconfigurazione dell'arcata, riallineamento delle fibre e definizione volumetrica per uno sguardo giovane ed espressivo." }
     ]
   },
 
@@ -96,8 +96,8 @@ export const ui = {
     "hero.desc": "Estudio especializado en Extensión de Pestañas, Laminado de Pestañas & Cejas, y Depilación Facial con Hilo en Monteverde Nuovo, Roma. Tratamientos clínicos de precisión y visagismo personalizado.",
     "hero.btn.whatsapp": "Reservar por WhatsApp",
     "hero.btn.prices": "Consultar Precios",
-    "hero.badge1.val": "48 Horas",
-    "hero.badge1.lbl": "Patch Test Obligatorio",
+    "hero.badge1.val": "Bajo Consulta",
+    "hero.badge1.lbl": "Patch Test Preventivo",
     "hero.badge2.val": "20°-25°C",
     "hero.badge2.lbl": "Humedad Controlada",
     "hero.badge3.val": "Roma",
@@ -111,9 +111,9 @@ export const ui = {
     "clinic.title1": "Excelencia Clínica &",
     "clinic.title2": "Bioseguridad",
     "clinic.desc": "La salud de tu piel y tus ojos es nuestro primer requisito profesional.",
-    "clinic.patch.title": "Patch Test Obligatorio (48h Antes)",
-    "clinic.patch.desc": "Para tu seguridad y máxima excelencia clínica, realizamos una prueba epicutánea (Patch Test) obligatoria al menos 48 horas antes de la primera sesión para extensiones (adhesivos cianocrilato) o henna/tintes para prevenir alergias.",
-    "clinic.patch.tag": "Sello de Protección y Calidad",
+    "clinic.patch.title": "Patch Test Preventivo (Bajo Consulta / 48h)",
+    "clinic.patch.desc": "Para tu máxima seguridad clínica, bajo consulta previa o evaluación (al menos 48 horas antes de la sesión), realizamos una prueba epicutánea alergológica para adhesivos (cianocrilatos) o tintes/henna.",
+    "clinic.patch.tag": "Servicio Disponible & Bioseguridad",
     "clinic.chem.title": "Química del Cianocrilato y Humedad",
     "clinic.chem.desc": "La polimerización del cianocrilato puro requiere condiciones microambientales controladas de humedad y temperatura para garantizar máxima retención sin emanaciones irritantes.",
 
@@ -153,7 +153,7 @@ export const ui = {
       { title: "Arquitectura y Bio-Henna de Cejas", subtitle: "Mapeo geométrico facial, perfilado de alta precisión y sombreado con henna orgánica para redefinir e intensificar las cejas naturales." },
       { title: "Micropigmentación y Visagismo de Cejas", subtitle: "Definición tridimensional del arco superciliar con pigmentos biorreabsorbibles para restaurar la simetría y densidad natural." },
       { title: "Depilación con Hilo, Arquitectura y Bio-Henna", subtitle: "Perfilado de precisión con hilo árabe, estudio de visagismo facial y sombreado natural con henna orgánica." },
-      { title: "Extensión de Pestañas Volumen Escenográfico", subtitle: "Volumen personalizado en abanico para intensificar la profundidad de la mirada con máxima ligereza." }
+      { title: "Laminado de Cejas & Visagismo Maduro", subtitle: "Reconfiguración del arco, alineación de fibras y definición volumétrica para una mirada joven y expresiva." }
     ]
   },
 
@@ -171,8 +171,8 @@ export const ui = {
     "hero.desc": "Specialized studio in Lash Extensions, Lash & Brow Lamination, and Threading Facial Hair Removal in Monteverde Nuovo, Rome. Clinical precision treatments and tailored visagism.",
     "hero.btn.whatsapp": "Book on WhatsApp",
     "hero.btn.prices": "View Pricelist",
-    "hero.badge1.val": "48 Hours",
-    "hero.badge1.lbl": "Mandatory Patch Test",
+    "hero.badge1.val": "Upon Request",
+    "hero.badge1.lbl": "Preventive Patch Test",
     "hero.badge2.val": "20°-25°C",
     "hero.badge2.lbl": "Controlled Humidity",
     "hero.badge3.val": "Rome",
@@ -186,9 +186,9 @@ export const ui = {
     "clinic.title1": "Clinical Excellence &",
     "clinic.title2": "Biosecurity",
     "clinic.desc": "The health of your skin and eyes is our top professional standard.",
-    "clinic.patch.title": "Mandatory Patch Test (48h Prior)",
-    "clinic.patch.desc": "For your safety and clinical excellence, an epicutaneous test (Patch Test) is mandatory at least 48 hours prior to first sessions for lash adhesives (cyanoacrylate) or henna/tints to prevent allergic reactions.",
-    "clinic.patch.tag": "Protection & Quality Guarantee",
+    "clinic.patch.title": "Preventive Patch Test (Upon Request / 48h)",
+    "clinic.patch.desc": "For your ultimate clinical safety, upon request or prior consultation (at least 48 hours before your session), we provide a preventive allergy patch test for adhesives (cyanoacrylate) or tints/henna.",
+    "clinic.patch.tag": "Available Service & Biosecurity",
     "clinic.chem.title": "Cyanoacrylate Chemistry & Humidity",
     "clinic.chem.desc": "Pure cyanoacrylate polymerization requires controlled microenvironmental humidity and temperature to guarantee maximum retention without irritating fumes.",
 
@@ -228,7 +228,7 @@ export const ui = {
       { title: "Brow Architecture & Organic Henna Mapping", subtitle: "Precision facial geometric mapping, brow shaping, and organic henna tinting to restore density and define natural eyebrows." },
       { title: "Eyebrow Micropigmentation & Facial Mapping", subtitle: "Three-dimensional brow arch definition using organic bio-absorbable pigments to restore natural symmetry and volume." },
       { title: "Threading, Brow Architecture & Bio-Henna", subtitle: "Precision Arabic threading hair removal, facial visagism architecture, and organic bio-henna shading." },
-      { title: "Volume Lash Extensions", subtitle: "Custom fan volume lash set to intensify eye depth with maximum featherlight comfort." }
+      { title: "Brow Lamination & Anti-Aging Visagism", subtitle: "Arch reconfiguration, fiber realignment, and volume definition for a youthful, expressive look." }
     ]
   }
 };
