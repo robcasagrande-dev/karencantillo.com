@@ -1,0 +1,110 @@
+{
+  "business": {
+    "name": "Karen Cantillo PMU",
+    "subtitle": "La tua esperta in bellezza sguardo",
+    "phone": "+39 378 0622421",
+    "formattedPhone": "+39 378 0622421",
+    "location": "Monteverde Nuovo, Roma",
+    "city": "Roma",
+    "country": "IT",
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "instagram": "@karen.cantillo.pmu",
+    "instagramUrl": "https://instagram.com/karen.cantillo.pmu",
+    "whatsappUrl": "https://wa.me/393780622421?text=Hola%20Karen,%20quisiera%20agendar%20una%20cita%20o%20informaci%C3%B3n"
+  },
+  "categories": [
+    {
+      "id": "extension-ciglia",
+      "title": "EXTENSION CIGLIA",
+      "subtitle": "Per uno sguardo intenso e personalizzato",
+      "description": "Offriamo diverse tecniche di applicazione per soddisfare ogni esigenza di volume e naturalezza. Tutti i servizi di impianto includono una consulenza iniziale gratuita.",
+      "services": [
+        {
+          "name": "Classic (Volume Naturale)",
+          "firstPlantPrice": 65,
+          "touchupPrice": 30,
+          "touchupNote": "Entro 3 settimane",
+          "currency": "€"
+        },
+        {
+          "name": "Soft Volume (Volume Intermedio)",
+          "firstPlantPrice": 50,
+          "touchupPrice": 30,
+          "touchupNote": "Entro 3 settimane",
+          "currency": "€"
+        },
+        {
+          "name": "Extreme Volume (Massimo Volume)",
+          "firstPlantPrice": 50,
+          "touchupPrice": 30,
+          "touchupNote": "Entro 3 settimane",
+          "currency": "€"
+        },
+        {
+          "name": "Rimozione Extension (Per Nuovo Impianto)",
+          "firstPlantPrice": 50,
+          "touchupPrice": null,
+          "touchupNote": null,
+          "currency": "€"
+        }
+      ]
+    },
+    {
+      "id": "laminazione-ciglia-sopracciglia",
+      "title": "LAMINAZIONE CIGLIA E SOPRACCIGLIA",
+      "subtitle": "Per nutrire, curvare e fissare i peli naturali",
+      "description": "Un trattamento di bellezza profondo che esalta le ciglia e le sopracciglia naturali, rendendole più sane e ordinate.",
+      "services": [
+        {
+          "name": "Laminazione Ciglia",
+          "price": 30,
+          "currency": "€"
+        },
+        {
+          "name": "Laminazione Ciglia (Inclusa Tinta)",
+          "price": 35,
+          "currency": "€"
+        },
+        {
+          "name": "Laminazione Sopracciglia",
+          "price": 35,
+          "currency": "€"
+        },
+        {
+          "name": "Henné + Depilazione Sopracciglia",
+          "price": 25,
+          "currency": "€"
+        }
+      ]
+    },
+    {
+      "id": "depilazione-viso",
+      "title": "DEPILAZIONE VISO",
+      "subtitle": "Metodi a scelta: Filo Arabo, Pinza o Cera",
+      "description": "Servizi rapidi ed efficaci per una pelle liscia e contorni definiti.",
+      "services": [
+        {
+          "area": "Sopracciglia (Definizione e Forma)",
+          "price": 10,
+          "currency": "€"
+        },
+        {
+          "area": "Sopracciglia Uomo (Depilazione)",
+          "price": 10,
+          "currency": "€"
+        },
+        {
+          "area": "Baffo",
+          "price": 8,
+          "currency": "€"
+        },
+        {
+          "area": "Mento",
+          "price": 8,
+          "currency": "€"
+        }
+      ]
+    }
+  ]
+}

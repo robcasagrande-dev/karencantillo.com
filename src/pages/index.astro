@@ -1,163 +1,199 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import BeforeAfterSlider from '../components/BeforeAfterSlider.astro';
+import servicesData from '../data/services.json';
+
+const { business, categories } = servicesData;
 
 const beforeAfterCases = [
   {
     beforeImg: "/images/Client1Before.jpg",
     afterImg: "/images/Client1After.jpg",
     title: "Microblading Hiperrealista",
-    subtitle: "Definición y relleno pelo a pelo adaptado a la forma natural del rostro."
+    subtitle: "Definizione e riempimento pelo a pelo adattato alla forma del viso."
   },
   {
     beforeImg: "/images/Client2Before.jpg",
     afterImg: "/images/Client2After.jpg",
     title: "Powder Brows (Efecto Polvo)",
-    subtitle: "Sombreado degradado con apariencia de maquillaje suave y duradero."
+    subtitle: "Sfumatura delicata con effetto makeup naturale e duraturo."
   },
   {
     beforeImg: "/images/Client3Before.jpg",
     afterImg: "/images/Client3After.jpg",
-    title: "Reconstrucción & Visagismo",
-    subtitle: "Simetría facial y restauración de densidad para una mirada rejuvenecida."
+    title: "Ricostruzione & Visagismo",
+    subtitle: "Simmetria facciale e ripristino della densità dello sguardo."
   },
   {
     beforeImg: "/images/Client4Before.jpg",
     afterImg: "/images/Client4After.jpg",
-    title: "Micropigmentación de Labios",
-    subtitle: "Coloración sutil, corrección de tono e iluminación del contorno labial."
+    title: "Micropigmentazione Labbra",
+    subtitle: "Colorazione naturale e definizione del contorno labiale."
   },
   {
     beforeImg: "/images/Client5Before.jpg",
     afterImg: "/images/Client5After.jpg",
-    title: "Corrección de Tono & Densidad",
-    subtitle: "Perfeccionamiento de cejas despobladas con pigmentos orgánicos Premium."
+    title: "Correzione Tonalità & Forma",
+    subtitle: "Perfezionamento sopracciglia diradate con pigmenti organici."
   },
   {
     beforeImg: "/images/Client6Before.jpg",
     afterImg: "/images/Client6After.jpg",
-    title: "Diseño & Perfilado Integral",
-    subtitle: "Armonización estética de rasgos faciales mediante técnicas combinadas."
+    title: "Design Integrale Sguardo",
+    subtitle: "Armonizzazione estetica completa con tecniche combinate."
   }
 ];
 ---
 
-<Layout title="Karen Cantillo | Especialista en Micropigmentación & PMU Studio">
+<Layout title="Karen Cantillo PMU | La tua esperta in bellezza sguardo">
   <!-- HERO SECTION -->
   <section class="hero-section">
     <div class="container hero-container">
       <div class="hero-content">
-        <span class="section-subtitle">MICROPIGMENTACIÓN & ESTÉTICA FACIAL</span>
+        <span class="section-subtitle">{business.name.toUpperCase()}</span>
         <h1 class="hero-title">
-          Arte & Precision en tu <span class="text-gradient">Mirada Natural</span>
+          {business.subtitle.split('bellezza')[0]} <span class="text-gradient">bellezza sguardo</span>
         </h1>
         <p class="hero-description">
-          Realza tu belleza facial con técnicas avanzadas de <strong>Microblading</strong>, <strong>Powder Brows</strong> y <strong>Micropigmentación de Labios</strong>. Diseños personalizados mediante visagismo profesional que armonizan perfectamente con tus rasgos.
+          Specialista in <strong>Extension Ciglia</strong>, <strong>Laminazione Ciglia & Sopracciglia</strong>, e <strong>Depilazione Viso</strong> a Monteverde Nuovo, Roma. Valorizza i tuoi tratti naturali con trattamenti personalizzati di alta qualità.
         </p>
         <div class="hero-actions">
-          <a href="https://wa.me/?text=Hola%20Karen,%20deseo%20agendar%20una%20valoraci%C3%B3n" class="btn-primary" target="_blank" rel="noopener">
-            Agendar Valoración
+          <a href={business.whatsappUrl} class="btn-primary" target="_blank" rel="noopener">
+            Prenota su WhatsApp ({business.formattedPhone})
           </a>
-          <a href="#transformaciones" class="btn-secondary">
-            Ver Resultados
+          <a href="#servizi" class="btn-secondary">
+            Vedi Listino Prezzi
           </a>
         </div>
 
         <div class="hero-badges">
           <div class="badge-item">
-            <span class="badge-number">100%</span>
-            <span class="badge-text">Pigmentos Premium</span>
+            <span class="badge-number">Roma</span>
+            <span class="badge-text">{business.location}</span>
           </div>
           <div class="badge-item">
-            <span class="badge-number">1.5 - 3 yrs</span>
-            <span class="badge-text">Durabilidad Promedio</span>
+            <span class="badge-number">Free</span>
+            <span class="badge-text">Consulenza Iniziale</span>
           </div>
           <div class="badge-item">
-            <span class="badge-number">VIP</span>
-            <span class="badge-text">Atención Personalizada</span>
+            <span class="badge-number">Instagram</span>
+            <span class="badge-text">{business.instagram}</span>
           </div>
         </div>
       </div>
 
       <div class="hero-media">
         <div class="hero-image-frame glass-card">
-          <img src="/images/Client1After.jpg" alt="Karen Cantillo - Micropigmentación de Cejas" class="hero-img" />
+          <img src="/images/Client1After.jpg" alt="Karen Cantillo PMU - Bellezza Sguardo" class="hero-img" />
           <div class="hero-image-tag">
-            <span class="tag-title">Resultado Real</span>
-            <span class="tag-sub">Microblading & Visagismo</span>
+            <span class="tag-title">{business.name}</span>
+            <span class="tag-sub">Monteverde Nuovo, Roma</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICIOS DESTACADOS -->
-  <section id="servicios" class="section">
+  <!-- LISTINO PREZZI & SERVIZI (JSON DYNAMIC RENDER) -->
+  <section id="servizi" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">NUESTROS TRATAMIENTOS</span>
-        <h2 class="section-title">Especialidades en <span class="text-gradient">Permanent Make-Up</span></h2>
+        <span class="section-subtitle">MENÙ TRATTAMENTI</span>
+        <h2 class="section-title">Listino Prezzi <span class="text-gradient">Servizi & Beauty</span></h2>
         <p class="section-description">
-          Procedimientos diseñados para potenciar tus rasgos sin perder la frescura y elegancia de tu apariencia cotidiana.
+          Tutti i prezzi ufficiali dei nostri trattamenti per ciglia, sopracciglia e depilazione viso.
         </p>
       </div>
 
-      <div class="services-grid">
-        <div class="service-card glass-card">
-          <div class="service-icon">✨</div>
-          <h3>Microblading Pelo a Pelo</h3>
-          <p>Técnica manual hiperrealista que recrea cada vello de la ceja con extrema precisión. Ideal para rellenar vacíos, dar forma y definir el marco de la mirada.</p>
-          <ul class="service-benefits">
-            <li>Acabado 100% natural</li>
-            <li>Visagismo personalizado</li>
-            <li>Pigmentos orgánicos Hipoalergénicos</li>
-          </ul>
-        </div>
+      <div class="pricing-sections">
+        {categories.map((cat) => (
+          <div class="pricing-category-card glass-card">
+            <div class="category-header">
+              <h3>{cat.title}</h3>
+              <span class="category-subtitle">{cat.subtitle}</span>
+              <p class="category-desc">{cat.description}</p>
+            </div>
 
-        <div class="service-card glass-card">
-          <div class="service-icon">👑</div>
-          <h3>Powder Brows (Efecto Polvo)</h3>
-          <p>Sombreado sutil con dermógrafo que simula el maquillaje suave. Aporta volumen y definición con un degradado elegante desde la cabeza hasta la cola de la ceja.</p>
-          <ul class="service-benefits">
-            <li>Apto para todo tipo de piel</li>
-            <li>Mayor fijación y durabilidad</li>
-            <li>Efecto maquillaje diario impecable</li>
-          </ul>
-        </div>
+            {cat.id === "extension-ciglia" && (
+              <div class="table-responsive">
+                <table class="price-table">
+                  <thead>
+                    <tr>
+                      <th>Trattamento</th>
+                      <th class="text-center">Primo Impianto</th>
+                      <th class="text-center">Ritocco (entro 3 sett.)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {cat.services.map((item) => (
+                      <tr>
+                        <td class="font-bold">{item.name}</td>
+                        <td class="price-cell text-center">€ {item.firstPlantPrice}</td>
+                        <td class="price-cell text-center">
+                          {item.touchupPrice ? `€ ${item.touchupPrice}` : "—"}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
 
-        <div class="service-card glass-card">
-          <div class="service-icon">💋</div>
-          <h3>Lip Blush (Micropigmentación Labial)</h3>
-          <p>Tratamiento que devuelve el rubor natural a los labios, corrige tonos pálidos o asimétricos y brinda una ilusión óptica de mayor volumen y frescura.</p>
-          <ul class="service-benefits">
-            <li>Definición del perfil labial</li>
-            <li>Corrección de tonalidad</li>
-            <li>Coloración natural duradera</li>
-          </ul>
-        </div>
+            {cat.id === "laminazione-ciglia-sopracciglia" && (
+              <div class="table-responsive">
+                <table class="price-table">
+                  <thead>
+                    <tr>
+                      <th>Trattamento</th>
+                      <th class="text-center">Prezzo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {cat.services.map((item) => (
+                      <tr>
+                        <td class="font-bold">{item.name}</td>
+                        <td class="price-cell text-center">€ {item.price}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
 
-        <div class="service-card glass-card">
-          <div class="service-icon">👁️</div>
-          <h3>Delineado Eyeliner Permanent</h3>
-          <p>Micropigmentación en la línea de pestañas para intensificar la mirada y crear un efecto visual de mayor densidad sin necesidad de maquillaje diario.</p>
-          <ul class="service-benefits">
-            <li>Mirada expresiva y descansada</li>
-            <li>Resistente al agua y sudor</li>
-            <li>Trazos finos y delicados</li>
-          </ul>
-        </div>
+            {cat.id === "depilazione-viso" && (
+              <div class="table-responsive">
+                <table class="price-table">
+                  <thead>
+                    <tr>
+                      <th>Area</th>
+                      <th class="text-center">Prezzo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {cat.services.map((item) => (
+                      <tr>
+                        <td class="font-bold">{item.area}</td>
+                        <td class="price-cell text-center">€ {item.price}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- ANTES Y DESPUÉS / TRANSFORMACIONES -->
-  <section id="transformaciones" class="section section-alt">
+  <section id="trasformazioni" class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">RESULTADOS REALES</span>
-        <h2 class="section-title">Galería <span class="text-gradient">Antes & Después</span></h2>
+        <span class="section-subtitle">GALLERIA LORI</span>
+        <h2 class="section-title">Risultati <span class="text-gradient">Prima & Dopo</span></h2>
         <p class="section-description">
-          Desliza la barra para comparar la transformación y el nivel de detalle alcanzado en cada paciente.
+          Scorri la barra per confrontare la trasformazione e la cura dei dettagli in ogni cliente.
         </p>
       </div>
 
@@ -175,13 +211,13 @@ const beforeAfterCases = [
   </section>
 
   <!-- SECCIÓN DE VIDEOS EN VIVO -->
-  <section id="videos" class="section">
+  <section id="video" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">EN ACCIÓN</span>
-        <h2 class="section-title">Demostración <span class="text-gradient">en Video</span></h2>
+        <span class="section-subtitle">IN AZIONE</span>
+        <h2 class="section-title">Video <span class="text-gradient">Dimostrativo</span></h2>
         <p class="section-description">
-          Observa de cerca la precisión, bioseguridad y acabado impecable durante la sesión de tratamiento.
+          Guarda da vicino la precisione e il tocco delicato durante le sedute di trattamento.
         </p>
       </div>
 
@@ -189,71 +225,37 @@ const beforeAfterCases = [
         <div class="video-card glass-card">
           <video controls poster="/images/ClientInProcess.jpg" class="showcase-video">
             <source src="/videos/ClientVideo1.mp4" type="video/mp4" />
-            Tu navegador no soporta reproducción de video HTML5.
+            Il tuo browser non supporta il tag video HTML5.
           </video>
           <div class="video-info">
-            <h4>Proceso de Micropigmentación en Vivo</h4>
-            <p>Trazo fino y controlado garantizando máxima comodidad y cicatrización perfecta.</p>
+            <h4>Trattamento in Corso</h4>
+            <p>Applicazione accurata per garantire massimo comfort e un effetto naturale.</p>
           </div>
         </div>
 
         <div class="video-card glass-card">
           <video controls poster="/images/Client7.jpg" class="showcase-video">
             <source src="/videos/ClientVideo2.mp4" type="video/mp4" />
-            Tu navegador no soporta reproducción de video HTML5.
+            Il tuo browser non supporta il tag video HTML5.
           </video>
           <div class="video-info">
-            <h4>Resultado Final & Detalle de Simetría</h4>
-            <p>Apreciación del color recién implantado con acabado difuminado e higiénico.</p>
+            <h4>Dettaglio Risultato Finale</h4>
+            <p>Sguardo intenso, ordinato e perfettamente definito.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT / SOBRE KAREN CANTILLO -->
-  <section id="nosotros" class="section section-alt">
-    <div class="container about-container">
-      <div class="about-image glass-card">
-        <img src="/images/ClientInProcess.jpg" alt="Karen Cantillo Especialista" class="about-img" />
-      </div>
-      <div class="about-content">
-        <span class="section-subtitle">CONOCE A LA ESPECIALISTA</span>
-        <h2 class="section-title">Pasión por la <span class="text-gradient">Perfección Estética</span></h2>
-        <p class="about-text">
-          Con amplia trayectoria en el área del maquillaje permanente y la estética facial, <strong>Karen Cantillo</strong> combina un enfoque artístico con las técnicas de micropigmentación más modernas del sector.
-        </p>
-        <p class="about-text">
-          Cada rostro es único. Por ello, cada procedimiento se inicia con un minucioso estudio de <em>visagismo facial</em> para determinar la forma, simetría y colorimetría exactas que se adapten a tu tono de piel y estilo personal.
-        </p>
-
-        <div class="about-features">
-          <div class="feature-box">
-            <h4>Bioseguridad Estricta</h4>
-            <p>Materiales 100% desechables de grado médico y normas de asepsia rigorously controladas.</p>
-          </div>
-          <div class="feature-box">
-            <h4>Pigmentos Orgánicos</h4>
-            <p>Fórmulas libres de metales pesados que no migran ni cambian a tonalidades no deseadas.</p>
-          </div>
-        </div>
-
-        <a href="https://wa.me/?text=Hola%20Karen,%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20de%20agenda" class="btn-primary" target="_blank" rel="noopener">
-          Solicitar Diagnóstico Sin Costo
-        </a>
       </div>
     </div>
   </section>
 
   <!-- CTA FINAL -->
-  <section id="contacto" class="section cta-section">
+  <section class="section cta-section">
     <div class="container cta-container glass-card">
-      <span class="section-subtitle">AGENDA TU ESPACIO</span>
-      <h2>Transforma tu Mirada con la Máxima Elegancia</h2>
-      <p>Reserva tu cita hoy mismo para una valoración personalizada y descubre el diseño ideal para tus cejas y labios.</p>
+      <span class="section-subtitle">PRENOTA ORA</span>
+      <h2>Esalta la Bellezza del Tuo Sguardo</h2>
+      <p>Per informazioni o per prenotare il tuo trattamento contattaci direttamente su WhatsApp.</p>
       <div class="cta-buttons">
-        <a href="https://wa.me/?text=Hola%20Karen,%20quiero%20reservar%20mi%20cita" class="btn-primary" target="_blank" rel="noopener">
-          Contactar por WhatsApp
+        <a href={business.whatsappUrl} class="btn-primary" target="_blank" rel="noopener">
+          Contatta +39 378 0622421
         </a>
       </div>
     </div>
@@ -261,7 +263,6 @@ const beforeAfterCases = [
 </Layout>
 
 <style>
-  /* Hero Section */
   .hero-section {
     padding: 160px 0 100px;
     position: relative;
@@ -355,51 +356,83 @@ const beforeAfterCases = [
     color: var(--text-secondary);
   }
 
-  /* Services Grid */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+  /* Pricing Sections */
+  .pricing-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
-  .service-card {
-    padding: 35px 30px;
+  .pricing-category-card {
+    padding: 40px;
   }
 
-  .service-icon {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
+  .category-header {
+    margin-bottom: 25px;
   }
 
-  .service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 14px;
+  .category-header h3 {
+    font-size: 2rem;
+    color: var(--accent-gold);
+    margin-bottom: 4px;
+  }
+
+  .category-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .category-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  .price-table th, .price-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-subtle);
+    text-align: left;
+  }
+
+  .price-table th {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .price-table td {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+  }
+
+  .font-bold {
+    font-weight: 600;
     color: var(--text-primary);
   }
 
-  .service-card p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    margin-bottom: 20px;
+  .price-cell {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.3rem !important;
+    color: var(--accent-gold) !important;
   }
 
-  .service-benefits {
-    list-style: none;
-    border-top: 1px solid var(--border-subtle);
-    padding-top: 16px;
-  }
-
-  .service-benefits li {
-    font-size: 0.85rem;
-    color: var(--accent-gold);
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .service-benefits li::before {
-    content: "✓";
+  .text-center {
+    text-align: center !important;
   }
 
   /* Gallery Section */
@@ -446,56 +479,6 @@ const beforeAfterCases = [
     font-size: 0.95rem;
   }
 
-  /* About Container */
-  .about-container {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-    align-items: center;
-  }
-
-  .about-image {
-    padding: 12px;
-  }
-
-  .about-img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: var(--radius-md);
-  }
-
-  .about-text {
-    color: var(--text-secondary);
-    font-size: 1.05rem;
-    margin-bottom: 20px;
-  }
-
-  .about-features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin: 30px 0;
-  }
-
-  .feature-box {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-subtle);
-    padding: 20px;
-    border-radius: var(--radius-sm);
-  }
-
-  .feature-box h4 {
-    color: var(--accent-gold);
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-  }
-
-  .feature-box p {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-  }
-
   /* CTA Section */
   .cta-container {
     text-align: center;
@@ -517,7 +500,7 @@ const beforeAfterCases = [
   }
 
   @media (max-width: 992px) {
-    .hero-container, .about-container {
+    .hero-container {
       grid-template-columns: 1fr;
       gap: 40px;
     }
@@ -526,6 +509,9 @@ const beforeAfterCases = [
     }
     .gallery-grid, .video-grid {
       grid-template-columns: 1fr;
+    }
+    .pricing-category-card {
+      padding: 24px 16px;
     }
   }
 </style>
