@@ -37,6 +37,16 @@ const pageTitle = title || defaultTitle;
 const pageDesc = description || defaultDesc;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://karencantillo.com');
+const siteUrl = Astro.site ? Astro.site.origin : 'https://karencantillo.com';
+const pathname = Astro.url.pathname;
+const cleanPathname = pathname.replace(/^\/(en|es)(\/|$)/, '/');
+
+const itURL = new URL(cleanPathname, siteUrl).href;
+const esURL = new URL(`/es${cleanPathname === '/' ? '/' : cleanPathname}`, siteUrl).href;
+const enURL = new URL(`/en${cleanPathname === '/' ? '/' : cleanPathname}`, siteUrl).href;
+
+const ogImageURL = image.startsWith('http') ? image : new URL(image, siteUrl).href;
+
 const { business, categories } = servicesData;
 
 // Build Schema.org hasOfferCatalog list
@@ -68,35 +78,43 @@ const offerCatalog = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
 
+    <!-- Multilingual Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="it" href={itURL} />
+    <link rel="alternate" hreflang="es" href={esURL} />
+    <link rel="alternate" hreflang="en" href={enURL} />
+    <link rel="alternate" hreflang="x-default" href={itURL} />
+
     <!-- SEO Meta Tags -->
     <title>{pageTitle}</title>
     <meta name="description" content={pageDesc} />
     <meta name="keywords" content="Karen Cantillo PMU, Extension Ciglia Roma Monteverde, Laminazione Ciglia Roma, Depilazione Filo Arabo Monteverde, Sopracciglia Roma" />
     <meta name="author" content="Karen Cantillo" />
+    <meta name="robots" content="index, follow" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDesc} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:locale" content={lang === 'it' ? 'it_IT' : lang === 'es' ? 'es_ES' : 'en_US'} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={pageTitle} />
     <meta property="twitter:description" content={pageDesc} />
-    <meta property="twitter:image" content={image} />
+    <meta property="twitter:image" content={ogImageURL} />
 
     <!-- Schema.org JSON-LD for BeautySalon with GeoCoordinates & offerCatalog -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "BeautySalon",
       "name": business.name,
-      "image": "https://karencantillo.com/images/Client1After.jpg",
-      "url": "https://karencantillo.com",
+      "image": `${siteUrl}/media/Client1After.jpg`,
+      "url": siteUrl,
       "telephone": business.phone,
-      "priceRange": "$$",
+      "priceRange": "€€",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Monteverde Nuovo",
@@ -109,6 +127,21 @@ const offerCatalog = {
         "latitude": business.geo.latitude,
         "longitude": business.geo.longitude
       },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Roma"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Monteverde Nuovo"
+        }
+      ],
+      "sameAs": [
+        business.instagramUrl,
+        business.whatsappUrl
+      ],
+      "knowsLanguage": ["it", "es", "en"],
       "description": business.subtitle,
       "hasOfferCatalog": offerCatalog
     })} />
