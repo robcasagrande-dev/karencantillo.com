@@ -73,8 +73,8 @@ export const ui = {
     "mobile.wa": "Prenota WhatsApp",
 
     "cases": [
-      { title: "Microblading Hiperrealista", subtitle: "Definizione e riempimento pelo a pelo adattato alla forma del viso." },
-      { title: "Powder Brows (Efecto Polvo)", subtitle: "Sfumatura delicata con effetto makeup naturale e duraturo." },
+      { title: "Architettura & Henné Sopracciglia", subtitle: "Studio del visagismo, sagomatura di precisione e sfumatura naturale all'henné bio per uno sguardo armonico ed intenso." },
+      { title: "Powder Brows (Effetto Polvere)", subtitle: "Sfumatura delicata con effetto makeup naturale e duraturo." },
       { title: "Ricostruzione & Visagismo", subtitle: "Simmetria facciale e ripristino della densità dello sguardo." },
       { title: "Micropigmentazione Labbra", subtitle: "Colorazione naturale e definizione del contorno labiale." },
       { title: "Correzione Tonalità & Forma", subtitle: "Perfezionamento sopracciglia diradate con pigmenti organici." },
@@ -148,7 +148,7 @@ export const ui = {
     "mobile.wa": "Reservar WhatsApp",
 
     "cases": [
-      { title: "Microblading Hiperrealista", subtitle: "Definición y relleno pelo a pelo adaptado a la forma del rostro." },
+      { title: "Arquitectura y Henna de Cejas", subtitle: "Estudio de visagismo, diseño de alta precisión y sombreado natural con henna orgánica para una mirada armónica e intensa." },
       { title: "Powder Brows (Efecto Polvo)", subtitle: "Sombreado delicado con efecto maquillaje natural y duradero." },
       { title: "Reconstrucción & Visagismo", subtitle: "Simetría facial y restauración de la densidad de la mirada." },
       { title: "Micropigmentación de Labios", subtitle: "Coloración natural y definición del contorno labial." },
@@ -223,7 +223,7 @@ export const ui = {
     "mobile.wa": "WhatsApp Booking",
 
     "cases": [
-      { title: "Hyperrealistic Microblading", subtitle: "Hairstroke definition tailored to natural facial symmetry." },
+      { title: "Brow Architecture & Henna Design", subtitle: "Tailored facial mapping, precision eyebrow shaping, and organic henna tinting for a defined, harmonized look." },
       { title: "Powder Brows (Ombré Effect)", subtitle: "Soft powder shading with natural, long-lasting makeup effect." },
       { title: "Reconstruction & Visagism", subtitle: "Facial symmetry and restoration of brow density." },
       { title: "Lip Blush Micropigmentation", subtitle: "Natural color enhancement and lip contour definition." },
