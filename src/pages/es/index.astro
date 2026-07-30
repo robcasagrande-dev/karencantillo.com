@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import BeforeAfterSlider from '../components/BeforeAfterSlider.astro';
-import servicesData from '../data/services.json';
-import { ui } from '../i18n/translations';
+import Layout from '../../layouts/Layout.astro';
+import BeforeAfterSlider from '../../components/BeforeAfterSlider.astro';
+import servicesData from '../../data/services.json';
+import { ui } from '../../i18n/translations';
 
-const lang = 'it';
+const lang = 'es';
 const t = ui[lang];
 
 const { business, categories, clinicalSpecs } = servicesData;
@@ -105,7 +105,7 @@ const instagramPosts = [
     </div>
   </section>
 
-  <!-- SEZIONE SICUREZZA CLINICA & TRASPARENZA -->
+  <!-- SECCIÓN SEGURIDAD CLÍNICA & TRASPARENCIA -->
   <section id="clinica" class="section section-alt">
     <div class="container">
       <div class="section-header">
@@ -130,14 +130,14 @@ const instagramPosts = [
           <p>{t["clinic.chem.desc"]}</p>
           <div class="env-specs">
             <span>Temperatura: <strong>{clinicalSpecs.environment.temperatureRange}</strong></span>
-            <span>Umidità: <strong>{clinicalSpecs.environment.humidityRange}</strong></span>
+            <span>Humedad: <strong>{clinicalSpecs.environment.humidityRange}</strong></span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LISTINO PREZZI & CONVERSION FLOW DEDICATO -->
+  <!-- LISTA DE PRECIOS & SERVICIOS -->
   <section id="servizi" class="section">
     <div class="container">
       <div class="section-header">
@@ -152,12 +152,7 @@ const instagramPosts = [
         {categories.map((cat) => (
           <div class="pricing-category-card glass-card">
             <div class="category-header">
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                <h3>{cat.title}</h3>
-                <a href={cat.slug} class="btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;">
-                  Local SEO Landing &rarr;
-                </a>
-              </div>
+              <h3>{cat.title}</h3>
               <span class="category-subtitle">{cat.subtitle}</span>
               <p class="category-desc">{cat.description}</p>
             </div>
@@ -279,7 +274,7 @@ const instagramPosts = [
     </div>
   </section>
 
-  <!-- ANTES Y DESPUÉS / PRIMA & DOPO TRANSFORMACIONES -->
+  <!-- ANTES Y DESPUÉS TRANSFORMACIONES -->
   <section id="trasformazioni" class="section section-alt">
     <div class="container">
       <div class="section-header">

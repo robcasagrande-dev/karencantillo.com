@@ -1,0 +1,90 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import servicesData from '../../data/services.json';
+
+const category = servicesData.categories.find(c => c.id === 'extension-ciglia')!;
+const { business, clinicalSpecs } = servicesData;
+---
+
+<Layout 
+  lang="it"
+  title="Extension Ciglia Roma Monteverde | Karen Cantillo PMU Studio"
+  description="Extension Ciglia Classic, Soft Volume e Extreme Volume a Roma Monteverde. 50€ primo impianto, 30€ ritocco. Prenota ora la tua consulenza."
+>
+  <section class="section service-hero">
+    <div class="container">
+      <span class="section-subtitle">LOCAL SEO — MONTEVERDE NUOVO, ROMA</span>
+      <h1 class="section-title">Extension Ciglia <span class="text-gradient">Roma Monteverde</span></h1>
+      <p class="section-description">
+        {category.description}
+      </p>
+
+      <div class="clinical-alert glass-card">
+        <h4>🛡️ Protocollo Clinico & Patch Test Obbligatorio</h4>
+        <p>{clinicalSpecs.patchTestDetails}</p>
+        <div class="humidity-tag">
+          <span>Controllo Microambientale Studio:</span>
+          <strong>Temp: {clinicalSpecs.environment.temperatureRange} | Umidità: {clinicalSpecs.environment.humidityRange}</strong>
+        </div>
+      </div>
+
+      <div class="table-responsive glass-card" style="margin-top: 40px; padding: 30px;">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Trattamento</th>
+              <th class="text-center">Primo Impianto</th>
+              <th class="text-center">Ritocco (entro 3 sett.)</th>
+              <th class="text-center">Prenotazione Diretta</th>
+            </tr>
+          </thead>
+          <tbody>
+            {category.services.map((item) => (
+              <tr>
+                <td>
+                  <strong class="font-bold">{item.name}</strong>
+                  <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">{item.description}</p>
+                </td>
+                <td class="price-cell text-center">€ {item.firstPlantPrice}</td>
+                <td class="price-cell text-center">
+                  {item.touchupPrice ? `€ ${item.touchupPrice}` : "—"}
+                </td>
+                <td class="text-center">
+                  <a 
+                    href={`https://wa.me/${business.whatsappNumber}?text=${encodeURIComponent(item.whatsappText)}`}
+                    target="_blank" 
+                    rel="noopener"
+                    class="btn-primary" 
+                    style="padding: 8px 16px; font-size: 0.8rem;"
+                  >
+                    Prenota WhatsApp
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .service-hero {
+    padding-top: 150px;
+  }
+  .clinical-alert {
+    padding: 24px;
+    margin-top: 30px;
+    border-left: 4px solid var(--accent-gold);
+  }
+  .clinical-alert h4 {
+    color: var(--accent-gold);
+    margin-bottom: 8px;
+  }
+  .humidity-tag {
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+</style>

@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import BeforeAfterSlider from '../components/BeforeAfterSlider.astro';
-import servicesData from '../data/services.json';
-import { ui } from '../i18n/translations';
+import Layout from '../../layouts/Layout.astro';
+import BeforeAfterSlider from '../../components/BeforeAfterSlider.astro';
+import servicesData from '../../data/services.json';
+import { ui } from '../../i18n/translations';
 
-const lang = 'it';
+const lang = 'en';
 const t = ui[lang];
 
 const { business, categories, clinicalSpecs } = servicesData;
@@ -98,14 +98,14 @@ const instagramPosts = [
           <img src="/images/Client1After.jpg" alt="Karen Cantillo PMU - Bellezza Sguardo" class="hero-img" />
           <div class="hero-image-tag">
             <span class="tag-title">{business.name}</span>
-            <span class="tag-sub">Monteverde Nuovo, Roma</span>
+            <span class="tag-sub">Monteverde Nuovo, Rome</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SEZIONE SICUREZZA CLINICA & TRASPARENZA -->
+  <!-- CLINICAL SAFETY & TRANSPARENCY SECTION -->
   <section id="clinica" class="section section-alt">
     <div class="container">
       <div class="section-header">
@@ -129,15 +129,15 @@ const instagramPosts = [
           <h3>{t["clinic.chem.title"]}</h3>
           <p>{t["clinic.chem.desc"]}</p>
           <div class="env-specs">
-            <span>Temperatura: <strong>{clinicalSpecs.environment.temperatureRange}</strong></span>
-            <span>Umidità: <strong>{clinicalSpecs.environment.humidityRange}</strong></span>
+            <span>Temperature: <strong>{clinicalSpecs.environment.temperatureRange}</strong></span>
+            <span>Humidity: <strong>{clinicalSpecs.environment.humidityRange}</strong></span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LISTINO PREZZI & CONVERSION FLOW DEDICATO -->
+  <!-- PRICELIST & SERVICES -->
   <section id="servizi" class="section">
     <div class="container">
       <div class="section-header">
@@ -152,12 +152,7 @@ const instagramPosts = [
         {categories.map((cat) => (
           <div class="pricing-category-card glass-card">
             <div class="category-header">
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                <h3>{cat.title}</h3>
-                <a href={cat.slug} class="btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;">
-                  Local SEO Landing &rarr;
-                </a>
-              </div>
+              <h3>{cat.title}</h3>
               <span class="category-subtitle">{cat.subtitle}</span>
               <p class="category-desc">{cat.description}</p>
             </div>
@@ -279,7 +274,7 @@ const instagramPosts = [
     </div>
   </section>
 
-  <!-- ANTES Y DESPUÉS / PRIMA & DOPO TRANSFORMACIONES -->
+  <!-- BEFORE & AFTER TRANSFORMATIONS -->
   <section id="trasformazioni" class="section section-alt">
     <div class="container">
       <div class="section-header">
@@ -305,7 +300,7 @@ const instagramPosts = [
     </div>
   </section>
 
-  <!-- SECCIÓN SOCIAL PROOF / DYNAMIC INSTAGRAM FEED -->
+  <!-- SOCIAL PROOF / DYNAMIC INSTAGRAM FEED -->
   <section class="section">
     <div class="container">
       <div class="section-header">
@@ -330,7 +325,7 @@ const instagramPosts = [
     </div>
   </section>
 
-  <!-- CTA FINAL -->
+  <!-- FINAL CTA -->
   <section class="section cta-section">
     <div class="container cta-container glass-card">
       <span class="section-subtitle">{t["cta.subtitle"]}</span>

@@ -4,25 +4,34 @@ interface Props {
   afterImg: string;
   title: string;
   subtitle: string;
+  beforeLabel?: string;
+  afterLabel?: string;
 }
 
-const { beforeImg, afterImg, title, subtitle } = Astro.props;
+const { 
+  beforeImg, 
+  afterImg, 
+  title, 
+  subtitle, 
+  beforeLabel = "PRIMA", 
+  afterLabel = "DOPO" 
+} = Astro.props;
 ---
 
 <div class="before-after-card glass-card">
   <div class="slider-wrapper">
     <!-- After Image (Base) -->
-    <img src={afterImg} alt={`${title} - Después`} class="img-after" loading="lazy" />
-    <span class="label label-after">DESPUÉS</span>
+    <img src={afterImg} alt={`${title} - ${afterLabel}`} class="img-after" loading="lazy" />
+    <span class="label label-after">{afterLabel}</span>
 
     <!-- Before Image (Overlay clipped) -->
     <div class="before-overlay">
-      <img src={beforeImg} alt={`${title} - Antes`} class="img-before" loading="lazy" />
-      <span class="label label-before">ANTES</span>
+      <img src={beforeImg} alt={`${title} - ${beforeLabel}`} class="img-before" loading="lazy" />
+      <span class="label label-before">{beforeLabel}</span>
     </div>
 
     <!-- Drag Handle Slider -->
-    <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Control de comparación Antes y Después" />
+    <input type="range" min="0" max="100" value="50" class="slider-input" aria-label={`Control ${beforeLabel} & ${afterLabel}`} />
     <div class="slider-line">
       <div class="slider-button">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">

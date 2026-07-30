@@ -1,8 +1,9 @@
 {
   "business": {
     "name": "Karen Cantillo PMU",
-    "subtitle": "La tua esperta in bellezza sguardo",
+    "subtitle": "L'Architettura dello Sguardo - Roma Monteverde",
     "phone": "+39 378 0622421",
+    "whatsappNumber": "393780622421",
     "formattedPhone": "+39 378 0622421",
     "location": "Monteverde Nuovo, Roma",
     "city": "Roma",
@@ -11,42 +12,65 @@
     "currencySymbol": "€",
     "instagram": "@karen.cantillo.pmu",
     "instagramUrl": "https://instagram.com/karen.cantillo.pmu",
-    "whatsappUrl": "https://wa.me/393780622421?text=Hola%20Karen,%20quisiera%20agendar%20una%20cita%20o%20informaci%C3%B3n"
+    "whatsappUrl": "https://wa.me/393780622421?text=Ciao%20Karen,%20vorrei%20informazioni%20o%20prenotare%20un%20trattamento",
+    "geo": {
+      "latitude": 41.8742,
+      "longitude": 12.4542
+    }
+  },
+  "clinicalSpecs": {
+    "patchTestRequired": true,
+    "patchTestWindow": "48 ore prima della prima seduta",
+    "patchTestDetails": "Il Patch Test (test epicutaneo) è obbligatorio almeno 48 ore prima della prima seduta di extension ciglia o henné per prevenire qualsiasi allergia cutanea od oculare.",
+    "environment": {
+      "temperatureRange": "20°C - 25°C",
+      "humidityRange": "40% - 70%",
+      "adhesiveNotice": "La polimerizzazione del cianocrilato puro richiede un controllo microambientale rigoroso per garantire massima tenuta senza arrossamenti."
+    }
   },
   "categories": [
     {
       "id": "extension-ciglia",
       "title": "EXTENSION CIGLIA",
       "subtitle": "Per uno sguardo intenso e personalizzato",
-      "description": "Offriamo diverse tecniche di applicazione per soddisfare ogni esigenza di volume e naturalezza. Tutti i servizi di impianto includono una consulenza iniziale gratuita.",
+      "description": "Offriamo diverse tecniche di applicazione per soddisfare ogni esigenza di volume e naturalezza. Tutti i servizi di impianto includono consulenza d'immagine gratuita.",
+      "slug": "/servizi/extension-ciglia-roma-monteverde",
       "services": [
         {
           "name": "Classic (Volume Naturale)",
-          "firstPlantPrice": 65,
+          "firstPlantPrice": 50,
           "touchupPrice": 30,
           "touchupNote": "Entro 3 settimane",
-          "currency": "€"
+          "currency": "€",
+          "description": "Applicazione pelo a pelo (metodo 1:1) per uno sguardo naturale, definito ed elegante.",
+          "whatsappText": "Ciao Karen, vorrei prenotare o informazioni sull'Extension Ciglia Classic (50€/30€)."
         },
         {
           "name": "Soft Volume (Volume Intermedio)",
           "firstPlantPrice": 50,
           "touchupPrice": 30,
           "touchupNote": "Entro 3 settimane",
-          "currency": "€"
+          "currency": "€",
+          "description": "Ventagli leggeri 2D-3D per aggiungere densità soffice senza appesantire la ciglia naturale.",
+          "whatsappText": "Ciao Karen, vorrei prenotare o informazioni sull'Extension Ciglia Soft Volume (50€/30€)."
         },
         {
           "name": "Extreme Volume (Massimo Volume)",
           "firstPlantPrice": 50,
           "touchupPrice": 30,
           "touchupNote": "Entro 3 settimane",
-          "currency": "€"
+          "currency": "€",
+          "description": "Volume d'impatto con ventagli ultra sottili 4D-6D per uno sguardo profondo e scenografico.",
+          "whatsappText": "Ciao Karen, vorrei prenotare o informazioni sull'Extension Ciglia Extreme Volume (50€/30€)."
         },
         {
-          "name": "Rimozione Extension (Per Nuovo Impianto)",
+          "name": "Rimozione Extension",
           "firstPlantPrice": 50,
           "touchupPrice": null,
           "touchupNote": null,
-          "currency": "€"
+          "currency": "€",
+          "description": "Rimozione delicata con remover chimico specifico per proteggere le ciglia naturali.",
+          "whatsappText": "Ciao Karen, vorrei prenotare la Rimozione Extension Ciglia (50€)."
         }
       ]
     },
@@ -55,26 +79,35 @@
       "title": "LAMINAZIONE CIGLIA E SOPRACCIGLIA",
       "subtitle": "Per nutrire, curvare e fissare i peli naturali",
       "description": "Un trattamento di bellezza profondo che esalta le ciglia e le sopracciglia naturali, rendendole più sane e ordinate.",
+      "slug": "/servizi/laminazione-ciglia-roma-monteverde",
       "services": [
         {
           "name": "Laminazione Ciglia",
           "price": 30,
-          "currency": "€"
+          "currency": "€",
+          "description": "Lifting naturale e curvatura profonda delle ciglia naturali con cheratina idratante.",
+          "whatsappText": "Ciao Karen, vorrei prenotare la Laminazione Ciglia (30€)."
         },
         {
           "name": "Laminazione Ciglia (Inclusa Tinta)",
           "price": 35,
-          "currency": "€"
+          "currency": "€",
+          "description": "Curvatura, nutrimento cheratinico e tinta scura intensa per uno sguardo definito 24/7.",
+          "whatsappText": "Ciao Karen, vorrei prenotare la Laminazione Ciglia con Tinta (35€)."
         },
         {
           "name": "Laminazione Sopracciglia",
-          "price": 35,
-          "currency": "€"
+          "price": 30,
+          "currency": "€",
+          "description": "Brow Lamination per fissare, pettinare e disciplinare i peli delle sopracciglia.",
+          "whatsappText": "Ciao Karen, vorrei prenotare la Laminazione Sopracciglia (30€)."
         },
         {
           "name": "Henné + Depilazione Sopracciglia",
           "price": 25,
-          "currency": "€"
+          "currency": "€",
+          "description": "Bio-tatuaggio all'henné naturale per tonalizzare pelle e pelo abbinato a sagomatura di precisione.",
+          "whatsappText": "Ciao Karen, vorrei prenotare Henné + Depilazione Sopracciglia (25€)."
         }
       ]
     },
@@ -83,26 +116,35 @@
       "title": "DEPILAZIONE VISO",
       "subtitle": "Metodi a scelta: Filo Arabo, Pinza o Cera",
       "description": "Servizi rapidi ed efficaci per una pelle liscia e contorni definiti.",
+      "slug": "/servizi/depilazione-viso-roma-monteverde",
       "services": [
         {
           "area": "Sopracciglia (Definizione e Forma)",
           "price": 10,
-          "currency": "€"
+          "currency": "€",
+          "description": "Studio del visagismo e definizione precisa della forma ideale per il viso.",
+          "whatsappText": "Ciao Karen, vorrei prenotare la Depilazione Sopracciglia (10€)."
         },
         {
           "area": "Sopracciglia Uomo (Depilazione)",
           "price": 10,
-          "currency": "€"
+          "currency": "€",
+          "description": "Epilazione maschile naturale e pulizia dell'arcata sopraccigliare.",
+          "whatsappText": "Ciao Karen, vorrei prenotare la Depilazione Sopracciglia Uomo (10€)."
         },
         {
           "area": "Baffo",
           "price": 8,
-          "currency": "€"
+          "currency": "€",
+          "description": "Rimozione peluria zona labbro superiore con filo arabo o cera delicata.",
+          "whatsappText": "Ciao Karen, vorrei prenotare la Depilazione Baffetto (8€)."
         },
         {
           "area": "Mento",
           "price": 8,
-          "currency": "€"
+          "currency": "€",
+          "description": "Epilazione zona mento per una pelle liscia e pulita.",
+          "whatsappText": "Ciao Karen, vorrei prenotare la Depilazione Mento (8€)."
         }
       ]
     }

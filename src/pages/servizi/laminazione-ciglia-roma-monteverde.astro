@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import servicesData from '../../data/services.json';
+
+const category = servicesData.categories.find(c => c.id === 'laminazione-ciglia-sopracciglia')!;
+const { business } = servicesData;
+---
+
+<Layout 
+  lang="it"
+  title="Laminazione Ciglia e Sopracciglia Roma Monteverde | Karen Cantillo PMU"
+  description="Trattamento di Laminazione Ciglia (30€), Laminazione Ciglia con Tinta (35€), Laminazione Sopracciglia (30€) e Henné a Roma Monteverde."
+>
+  <section class="section service-hero">
+    <div class="container">
+      <span class="section-subtitle">LOCAL SEO — MONTEVERDE NUOVO, ROMA</span>
+      <h1 class="section-title">Laminazione Ciglia & Sopracciglia <span class="text-gradient">Monteverde</span></h1>
+      <p class="section-description">
+        {category.description}
+      </p>
+
+      <div class="table-responsive glass-card" style="margin-top: 40px; padding: 30px;">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Trattamento</th>
+              <th class="text-center">Prezzo</th>
+              <th class="text-center">Prenotazione Diretta</th>
+            </tr>
+          </thead>
+          <tbody>
+            {category.services.map((item) => (
+              <tr>
+                <td>
+                  <strong class="font-bold">{item.name}</strong>
+                  <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">{item.description}</p>
+                </td>
+                <td class="price-cell text-center">€ {item.price}</td>
+                <td class="text-center">
+                  <a 
+                    href={`https://wa.me/${business.whatsappNumber}?text=${encodeURIComponent(item.whatsappText)}`}
+                    target="_blank" 
+                    rel="noopener"
+                    class="btn-primary" 
+                    style="padding: 8px 16px; font-size: 0.8rem;"
+                  >
+                    Prenota WhatsApp
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .service-hero {
+    padding-top: 150px;
+  }
+</style>

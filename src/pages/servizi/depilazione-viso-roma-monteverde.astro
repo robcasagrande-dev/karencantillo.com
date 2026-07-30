@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import servicesData from '../../data/services.json';
+
+const category = servicesData.categories.find(c => c.id === 'depilazione-viso')!;
+const { business } = servicesData;
+---
+
+<Layout 
+  lang="it"
+  title="Depilazione Viso Filo Arabo Roma Monteverde | Karen Cantillo PMU"
+  description="Depilazione ed epilazione viso a Roma Monteverde con Filo Arabo (Threading), Pinza o Cera. Sopracciglia 10€, Baffetto 8€, Mento 8€."
+>
+  <section class="section service-hero">
+    <div class="container">
+      <span class="section-subtitle">LOCAL SEO — MONTEVERDE NUOVO, ROMA</span>
+      <h1 class="section-title">Depilazione Viso <span class="text-gradient">Monteverde</span></h1>
+      <p class="section-description">
+        {category.description}
+      </p>
+
+      <div class="table-responsive glass-card" style="margin-top: 40px; padding: 30px;">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Area / Trattamento</th>
+              <th class="text-center">Prezzo</th>
+              <th class="text-center">Prenotazione Diretta</th>
+            </tr>
+          </thead>
+          <tbody>
+            {category.services.map((item) => (
+              <tr>
+                <td>
+                  <strong class="font-bold">{item.area}</strong>
+                  <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">{item.description}</p>
+                </td>
+                <td class="price-cell text-center">€ {item.price}</td>
+                <td class="text-center">
+                  <a 
+                    href={`https://wa.me/${business.whatsappNumber}?text=${encodeURIComponent(item.whatsappText)}`}
+                    target="_blank" 
+                    rel="noopener"
+                    class="btn-primary" 
+                    style="padding: 8px 16px; font-size: 0.8rem;"
+                  >
+                    Prenota WhatsApp
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .service-hero {
+    padding-top: 150px;
+  }
+</style>
