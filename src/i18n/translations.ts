@@ -74,11 +74,11 @@ export const ui = {
 
     "cases": [
       { title: "Architettura & Henné Sopracciglia", subtitle: "Studio del visagismo, sagomatura di precisione e sfumatura naturale all'henné bio per uno sguardo armonico ed intenso." },
-      { title: "Powder Brows (Effetto Polvere)", subtitle: "Sfumatura delicata con effetto makeup naturale e duraturo." },
-      { title: "Ricostruzione & Visagismo", subtitle: "Simmetria facciale e ripristino della densità dello sguardo." },
-      { title: "Micropigmentazione Labbra", subtitle: "Colorazione naturale e definizione del contorno labiale." },
-      { title: "Correzione Tonalità & Forma", subtitle: "Perfezionamento sopracciglia diradate con pigmenti organici." },
-      { title: "Design Integrale Sguardo", subtitle: "Armonizzazione estetica completa con tecniche combinate." }
+      { title: "Combo Sguardo: Architettura, Henné & Extension Ciglia", subtitle: "Architettura e sagomatura sopracciglia con sfumatura bio-henné abbinata ad impianto extension ciglia per una trasformazione dello sguardo a 360°." },
+      { title: "Ricostruzione & Visagismo Sopracciglia", subtitle: "Simmetria facciale e ripristino della densità dello sguardo con tecniche combinate di precisione." },
+      { title: "Laminazione Ciglia + Tinta Scura", subtitle: "Lifting naturale, curvatura cheratinica profonda e colorazione scura intensa." },
+      { title: "Correzione Tonalità & Forma Sopracciglia", subtitle: "Perfezionamento sopracciglia diradate con pigmentazione organica avanzata." },
+      { title: "Design Integrale Sguardo & Ciglia", subtitle: "Armonizzazione estetica completa del contorno occhi e dell'arcata sopraccigliare." }
     ]
   },
 
@@ -149,11 +149,11 @@ export const ui = {
 
     "cases": [
       { title: "Arquitectura y Henna de Cejas", subtitle: "Estudio de visagismo, diseño de alta precisión y sombreado natural con henna orgánica para una mirada armónica e intensa." },
-      { title: "Powder Brows (Efecto Polvo)", subtitle: "Sombreado delicado con efecto maquillaje natural y duradero." },
-      { title: "Reconstrucción & Visagismo", subtitle: "Simetría facial y restauración de la densidad de la mirada." },
-      { title: "Micropigmentación de Labios", subtitle: "Coloración natural y definición del contorno labial." },
-      { title: "Corrección de Tono & Forma", subtitle: "Perfeccionamiento de cejas despobladas con pigmentos orgánicos." },
-      { title: "Diseño Integral de Mirada", subtitle: "Armonización estética completa con técnicas combinadas." }
+      { title: "Combo Mirada: Arquitectura, Henna y Extensión de Pestañas", subtitle: "Arquitectura y perfilado de cejas con tinte de henna orgánica combinado con extensión de pestañas para una transformación completa del rostro." },
+      { title: "Reconstrucción & Visagismo de Cejas", subtitle: "Simetría facial y restauración de la densidad de la mirada con técnicas combinadas de precisión." },
+      { title: "Laminado de Pestañas + Tinte Oscuro", subtitle: "Lifting natural, curvatura queratínica profunda y coloración oscura intensa." },
+      { title: "Corrección de Tono & Forma de Cejas", subtitle: "Perfeccionamiento de cejas despobladas con pigmentación orgánica avanzada." },
+      { title: "Diseño Integral de Mirada & Pestañas", subtitle: "Armonización estética completa del contorno de ojos y del arco superciliar." }
     ]
   },
 
@@ -224,11 +224,11 @@ export const ui = {
 
     "cases": [
       { title: "Brow Architecture & Henna Design", subtitle: "Tailored facial mapping, precision eyebrow shaping, and organic henna tinting for a defined, harmonized look." },
-      { title: "Powder Brows (Ombré Effect)", subtitle: "Soft powder shading with natural, long-lasting makeup effect." },
-      { title: "Reconstruction & Visagism", subtitle: "Facial symmetry and restoration of brow density." },
-      { title: "Lip Blush Micropigmentation", subtitle: "Natural color enhancement and lip contour definition." },
-      { title: "Tone & Shape Correction", subtitle: "Sparse brow enhancement using premium organic pigments." },
-      { title: "Full Eye Design", subtitle: "Complete aesthetic harmonization with combined techniques." }
+      { title: "Full Eye Combo: Brow Architecture, Henna & Lash Extensions", subtitle: "Precision brow mapping, organic henna tinting, and volume lash extensions combined for a complete 360° eye transformation." },
+      { title: "Brow Reconstruction & Visagism", subtitle: "Facial symmetry and restoration of brow density using combined precision techniques." },
+      { title: "Lash Lamination + Dark Tint", subtitle: "Natural lash lift, deep keratin curl enhancement, and intense dark tinting." },
+      { title: "Brow Tone & Shape Correction", subtitle: "Sparse brow enhancement using advanced organic pigmentation." },
+      { title: "Full Eye & Lash Design", subtitle: "Complete aesthetic harmonization of eye contour and brow arch." }
     ]
   }
 };
