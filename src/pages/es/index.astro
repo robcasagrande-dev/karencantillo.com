@@ -11,40 +11,64 @@ const { business, categories, clinicalSpecs } = servicesData;
 
 const beforeAfterCases = [
   {
-    beforeImg: "/images/Client1Before.jpg",
-    afterImg: "/images/Client1After.jpg",
+    beforeMedia: "/media/Client1Before.jpg",
+    afterMedia: "/media/Client1After.jpg",
     title: t.cases[0].title,
     subtitle: t.cases[0].subtitle
   },
   {
-    beforeImg: "/images/Client2Before.jpg",
-    afterImg: "/images/Client2After.jpg",
+    beforeMedia: "/media/Client2Before.jpg",
+    afterMedia: "/media/Client2After.jpg",
     title: t.cases[1].title,
     subtitle: t.cases[1].subtitle
   },
   {
-    beforeImg: "/images/Client3Before.jpg",
-    afterImg: "/images/Client3After.jpg",
+    beforeMedia: "/media/Client3Before.jpg",
+    afterMedia: "/media/Client3After.jpg",
     title: t.cases[2].title,
     subtitle: t.cases[2].subtitle
   },
   {
-    beforeImg: "/images/Client4Before.jpg",
-    afterImg: "/images/Client4After.jpg",
+    beforeMedia: "/media/Client5Before.jpg",
+    afterMedia: "/media/Client5After.jpg",
     title: t.cases[3].title,
     subtitle: t.cases[3].subtitle
   },
   {
-    beforeImg: "/images/Client5Before.jpg",
-    afterImg: "/images/Client5After.jpg",
+    beforeMedia: "/media/Client6Before.jpg",
+    afterMedia: "/media/Client7Before.jpg",
     title: t.cases[4].title,
     subtitle: t.cases[4].subtitle
   },
   {
-    beforeImg: "/images/Client6Before.jpg",
-    afterImg: "/images/Client7.jpg",
+    beforeMedia: "/media/ClientXBefore.jpg",
+    afterMedia: "/media/ClientXAfter.mp4",
     title: t.cases[5].title,
     subtitle: t.cases[5].subtitle
+  },
+  {
+    beforeMedia: "/media/ClientKBefore.mp4",
+    afterMedia: "/media/ClientKAfter.mp4",
+    title: t.cases[6].title,
+    subtitle: t.cases[6].subtitle
+  },
+  {
+    beforeMedia: "/media/ClientQBefore.mp4",
+    afterMedia: "/media/ClientQAfter.mp4",
+    title: t.cases[7].title,
+    subtitle: t.cases[7].subtitle
+  },
+  {
+    beforeMedia: "/media/ClientWBefore.mp4",
+    afterMedia: "/media/ClientWAfter.mp4",
+    title: t.cases[8].title,
+    subtitle: t.cases[8].subtitle
+  },
+  {
+    beforeMedia: "/media/ClientZBefore.mp4",
+    afterMedia: "/media/ClientZAfter.mp4",
+    title: t.cases[9].title,
+    subtitle: t.cases[9].subtitle
   }
 ];
 
@@ -288,8 +312,8 @@ const instagramPosts = [
       <div class="gallery-grid">
         {beforeAfterCases.map(item => (
           <BeforeAfterSlider 
-            beforeImg={item.beforeImg} 
-            afterImg={item.afterImg} 
+            beforeMedia={item.beforeMedia} 
+            afterMedia={item.afterMedia} 
             title={item.title} 
             subtitle={item.subtitle} 
             beforeLabel={t["slider.before"]}

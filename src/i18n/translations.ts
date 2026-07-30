@@ -57,7 +57,7 @@ export const ui = {
     "results.subtitle": "GALLERIA REALE",
     "results.title1": "Risultati",
     "results.title2": "Prima & Dopo",
-    "results.desc": "Confronta l'armonia e il livello di simmetria raggiunto per ogni cliente.",
+    "results.desc": "Confronta l'armonia e il livello di simmetria raggiunto per ogni cliente con foto e video interattivi.",
 
     "social.subtitle": "SOCIAL PROOF",
     "social.title1": "Seguici su",
@@ -76,9 +76,13 @@ export const ui = {
       { title: "Architettura & Henné Sopracciglia", subtitle: "Studio del visagismo, sagomatura di precisione e sfumatura naturale all'henné bio per uno sguardo armonico ed intenso." },
       { title: "Combo Sguardo: Architettura, Henné & Extension Ciglia", subtitle: "Architettura e sagomatura sopracciglia con sfumatura bio-henné abbinata ad impianto extension ciglia per una trasformazione dello sguardo a 360°." },
       { title: "Architettura & Bio-Henné Sopracciglia", subtitle: "Mappatura geometrica del viso, sagomatura di precisione e riempimento bio-henné per ridefinire ed intensificare le sopracciglia naturali." },
-      { title: "Micropigmentazione & Visagismo Sopracciglia", subtitle: "Definizione tridimensionale dell'arcata sopraccigliare con pigmenti bioriassorbibili per ripristinare simmetria e densità naturale." },
       { title: "Depilazione a Filo, Architettura & Bio-Henné", subtitle: "Definizione dell'arcata con filo arabo di precisione, studio visagistico e sfumatura naturale all'henné bio." },
-      { title: "Laminazione Sopracciglia & Visagismo Maturo", subtitle: "Riconfigurazione dell'arcata, riallineamento delle fibre e definizione volumetrica per uno sguardo giovane ed espressivo." }
+      { title: "Laminazione Sopracciglia & Visagismo Maturo", subtitle: "Riconfigurazione dell'arcata, riallineamento delle fibre e definizione volumetrica per uno sguardo giovane ed espressivo." },
+      { title: "Visagismo Sopracciglia & Motion Ciglia", subtitle: "Prima in foto e dopo in video: studio visagistico sopraccigliare abbinato a movimento fluido delle ciglia." },
+      { title: "Extension Ciglia Volume Scenografico (Video)", subtitle: "Trasformazione video prima e dopo: ventilazione personalizzata e massima leggerezza delle ciglia." },
+      { title: "Laminazione Ciglia & Cheratina (Video)", subtitle: "Trasformazione video prima e dopo: curvatura naturale, nutrimento cheratinico e tinta scura." },
+      { title: "Depilazione Filo Arabo & Modellamento (Video)", subtitle: "Trasformazione video prima e dopo: pulizia profonda dei contorni ed architettura sopraccigliare." },
+      { title: "Volume Scenografico & Sguardo 360° (Video)", subtitle: "Trasformazione video prima e dopo: effetto makeup tridimensionale ad alto impatto visivo." }
     ]
   },
 
@@ -132,7 +136,7 @@ export const ui = {
     "results.subtitle": "GALERÍA REAL",
     "results.title1": "Resultados",
     "results.title2": "Antes & Después",
-    "results.desc": "Compara la armonía y el nivel de simetría logrado para cada cliente.",
+    "results.desc": "Compara la armonía y el nivel de simetría logrado para cada cliente con fotos y videos interactivos.",
 
     "social.subtitle": "PRUEBA SOCIAL",
     "social.title1": "Síguenos en",
@@ -151,9 +155,13 @@ export const ui = {
       { title: "Arquitectura y Henna de Cejas", subtitle: "Estudio de visagismo, diseño de alta precisión y sombreado natural con henna orgánica para una mirada armónica e intensa." },
       { title: "Combo Mirada: Arquitectura, Henna y Extensión de Pestañas", subtitle: "Arquitectura y perfilado de cejas con tinte de henna orgánica combinado con extensión de pestañas para una transformación completa del rostro." },
       { title: "Arquitectura y Bio-Henna de Cejas", subtitle: "Mapeo geométrico facial, perfilado de alta precisión y sombreado con henna orgánica para redefinir e intensificar las cejas naturales." },
-      { title: "Micropigmentación y Visagismo de Cejas", subtitle: "Definición tridimensional del arco superciliar con pigmentos biorreabsorbibles para restaurar la simetría y densidad natural." },
       { title: "Depilación con Hilo, Arquitectura y Bio-Henna", subtitle: "Perfilado de precisión con hilo árabe, estudio de visagismo facial y sombreado natural con henna orgánica." },
-      { title: "Laminado de Cejas & Visagismo Maduro", subtitle: "Reconfiguración del arco, alineación de fibras y definición volumétrica para una mirada joven y expresiva." }
+      { title: "Laminado de Cejas & Visagismo Maduro", subtitle: "Reconfiguración del arco, alineación de fibras y definición volumétrica para una mirada joven y expresiva." },
+      { title: "Visagismo de Cejas & Motion de Pestañas", subtitle: "Antes en foto y después en video: estudio de visagismo superciliar combinado con movimiento fluido de pestañas." },
+      { title: "Extensión de Pestañas Volumen Escenográfico (Video)", subtitle: "Transformación en video antes y después: abanicos personalizados y máxima ligereza." },
+      { title: "Laminado de Pestañas & Queratina (Video)", subtitle: "Transformación en video antes y después: curvatura natural, nutrición con queratina y tinte oscuro." },
+      { title: "Depilación con Hilo Árabe & Perfilado (Video)", subtitle: "Transformación en video antes y después: limpieza profunda de contornos y arquitectura de cejas." },
+      { title: "Volumen Escenográfico & Mirada 360° (Video)", subtitle: "Transformación en video antes y después: efecto maquillaje tridimensional de alto impacto visual." }
     ]
   },
 
@@ -207,7 +215,7 @@ export const ui = {
     "results.subtitle": "REAL GALLERY",
     "results.title1": "Results",
     "results.title2": "Before & After",
-    "results.desc": "Compare the harmony and level of facial symmetry achieved for every client.",
+    "results.desc": "Compare the harmony and level of facial symmetry achieved for every client using interactive photo and video comparisons.",
 
     "social.subtitle": "SOCIAL PROOF",
     "social.title1": "Follow us on",
@@ -226,9 +234,13 @@ export const ui = {
       { title: "Brow Architecture & Henna Design", subtitle: "Tailored facial mapping, precision eyebrow shaping, and organic henna tinting for a defined, harmonized look." },
       { title: "Full Eye Combo: Brow Architecture, Henna & Lash Extensions", subtitle: "Precision brow mapping, organic henna tinting, and volume lash extensions combined for a complete 360° eye transformation." },
       { title: "Brow Architecture & Organic Henna Mapping", subtitle: "Precision facial geometric mapping, brow shaping, and organic henna tinting to restore density and define natural eyebrows." },
-      { title: "Eyebrow Micropigmentation & Facial Mapping", subtitle: "Three-dimensional brow arch definition using organic bio-absorbable pigments to restore natural symmetry and volume." },
       { title: "Threading, Brow Architecture & Bio-Henna", subtitle: "Precision Arabic threading hair removal, facial visagism architecture, and organic bio-henna shading." },
-      { title: "Brow Lamination & Anti-Aging Visagism", subtitle: "Arch reconfiguration, fiber realignment, and volume definition for a youthful, expressive look." }
+      { title: "Brow Lamination & Anti-Aging Visagism", subtitle: "Arch reconfiguration, fiber realignment, and volume definition for a youthful, expressive look." },
+      { title: "Brow Visagism & Motion Lash Design", subtitle: "Before image paired with motion video after: brow facial mapping combined with fluid lash extensions motion." },
+      { title: "Volume Lash Extensions (Video)", subtitle: "Video transformation before and after: custom fan volume set with featherlight comfort." },
+      { title: "Lash Lamination & Keratin (Video)", subtitle: "Video transformation before and after: natural lift, keratin nutrition, and dark tinting." },
+      { title: "Arabic Threading & Brow Shaping (Video)", subtitle: "Video transformation before and after: deep contour cleaning and brow arch design." },
+      { title: "360° Eye & Lash Volume (Video)", subtitle: "Video transformation before and after: high-impact three-dimensional makeup effect." }
     ]
   }
 };

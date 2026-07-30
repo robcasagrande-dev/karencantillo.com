@@ -1,7 +1,7 @@
 ---
 interface Props {
-  beforeImg: string;
-  afterImg: string;
+  beforeMedia: string;
+  afterMedia: string;
   title: string;
   subtitle: string;
   beforeLabel?: string;
@@ -9,24 +9,35 @@ interface Props {
 }
 
 const { 
-  beforeImg, 
-  afterImg, 
+  beforeMedia, 
+  afterMedia, 
   title, 
   subtitle, 
   beforeLabel = "PRIMA", 
   afterLabel = "DOPO" 
 } = Astro.props;
+
+const isBeforeVideo = beforeMedia.endsWith('.mp4') || beforeMedia.endsWith('.webm');
+const isAfterVideo = afterMedia.endsWith('.mp4') || afterMedia.endsWith('.webm');
 ---
 
 <div class="before-after-card glass-card">
   <div class="slider-wrapper">
-    <!-- After Image (Base) -->
-    <img src={afterImg} alt={`${title} - ${afterLabel}`} class="img-after" loading="lazy" />
+    <!-- After Media (Base) -->
+    {isAfterVideo ? (
+      <video src={afterMedia} autoplay loop muted playsinline class="media-after" />
+    ) : (
+      <img src={afterMedia} alt={`${title} - ${afterLabel}`} class="media-after" loading="lazy" />
+    )}
     <span class="label label-after">{afterLabel}</span>
 
-    <!-- Before Image (Overlay clipped) -->
+    <!-- Before Media (Overlay clipped) -->
     <div class="before-overlay">
-      <img src={beforeImg} alt={`${title} - ${beforeLabel}`} class="img-before" loading="lazy" />
+      {isBeforeVideo ? (
+        <video src={beforeMedia} autoplay loop muted playsinline class="media-before" />
+      ) : (
+        <img src={beforeMedia} alt={`${title} - ${beforeLabel}`} class="media-before" loading="lazy" />
+      )}
       <span class="label label-before">{beforeLabel}</span>
     </div>
 
@@ -53,6 +64,17 @@ const {
     const input = card.querySelector('.slider-input') as HTMLInputElement;
     const overlay = card.querySelector('.before-overlay') as HTMLElement;
     const line = card.querySelector('.slider-line') as HTMLElement;
+    const wrapper = card.querySelector('.slider-wrapper') as HTMLElement;
+    const mediaBefore = card.querySelector('.media-before') as HTMLElement;
+
+    function updateWidth() {
+      if (wrapper && mediaBefore) {
+        mediaBefore.style.width = `${wrapper.clientWidth}px`;
+      }
+    }
+
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
 
     if (input && overlay && line) {
       input.addEventListener('input', (e) => {
@@ -77,9 +99,10 @@ const {
     height: 380px;
     overflow: hidden;
     user-select: none;
+    background: #000;
   }
 
-  .img-after, .img-before {
+  .media-after {
     position: absolute;
     top: 0;
     left: 0;
@@ -98,6 +121,15 @@ const {
     overflow: hidden;
     z-index: 2;
     transition: width 0.05s linear;
+  }
+
+  .media-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   /* Label styling */
@@ -157,28 +189,38 @@ const {
     transform: translate(-50%, -50%);
     width: 38px;
     height: 38px;
-    border-radius: 50%;
-    background: var(--gradient-gold);
+    background: var(--accent-gold);
     color: #0b0a0e;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 0 0 3px rgba(229, 193, 88, 0.3);
   }
 
   .card-info {
-    padding: 24px;
-    background: var(--bg-surface);
+    padding: 1.5rem;
+    background: var(--bg-card);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .card-info h4 {
-    font-size: 1.3rem;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
     color: var(--text-primary);
-    margin-bottom: 6px;
+    margin-bottom: 0.5rem;
+
+    background: linear-gradient(135deg, #ffffff 0%, var(--accent-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .card-info p {
-    color: var(--text-secondary);
+    color: var(--text-muted);
     font-size: 0.9rem;
+    line-height: 1.5;
   }
 </style>

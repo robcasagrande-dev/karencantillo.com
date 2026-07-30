@@ -7,6 +7,9 @@ dist/
 # Build and temp files
 .astro/
 .DS_Store
+.wrangler/
+scratch/
+Images and Videos/
 
 # Environment variables
 .env
