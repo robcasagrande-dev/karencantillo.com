@@ -16,8 +16,8 @@ export const ui = {
     "nav.contact": "Prenota Ora",
     
     "hero.subtitle": "KAREN CANTILLO PMU — MONTEVERDE NUOVO, ROMA",
-    "hero.title1": "L'Architettura dello",
-    "hero.title2": "Sguardo Naturale",
+    "hero.title1": "Extension Ciglia &",
+    "hero.title2": "Laminazione a Roma Monteverde",
     "hero.desc": "Studio specializzato in Extension Ciglia, Laminazione Ciglia & Sopracciglia, e Depilazione Viso a Filo Arabo a Monteverde Nuovo, Roma. Trattamenti clinici di precisione e visagismo personalizzato.",
     "hero.btn.whatsapp": "Prenota su WhatsApp",
     "hero.btn.prices": "Consulta Listino Prezzi",
@@ -126,8 +126,8 @@ export const ui = {
     "nav.contact": "Reservar Ahora",
 
     "hero.subtitle": "KAREN CANTILLO PMU — MONTEVERDE NUOVO, ROMA",
-    "hero.title1": "La Arquitectura de la",
-    "hero.title2": "Mirada Natural",
+    "hero.title1": "Extensión de Pestañas &",
+    "hero.title2": "Laminado en Roma Monteverde",
     "hero.desc": "Estudio especializado en Extensión de Pestañas, Laminado de Pestañas & Cejas, y Depilación Facial con Hilo en Monteverde Nuovo, Roma. Tratamientos clínicos de precisión y visagismo personalizado.",
     "hero.btn.whatsapp": "Reservar por WhatsApp",
     "hero.btn.prices": "Consultar Precios",
@@ -236,8 +236,8 @@ export const ui = {
     "nav.contact": "Book Now",
 
     "hero.subtitle": "KAREN CANTILLO PMU — MONTEVERDE NUOVO, ROME",
-    "hero.title1": "The Architecture of a",
-    "hero.title2": "Natural Look",
+    "hero.title1": "Lash Extensions &",
+    "hero.title2": "Lamination in Rome Monteverde",
     "hero.desc": "Specialized studio in Lash Extensions, Lash & Brow Lamination, and Threading Facial Hair Removal in Monteverde Nuovo, Rome. Clinical precision treatments and tailored visagism.",
     "hero.btn.whatsapp": "Book on WhatsApp",
     "hero.btn.prices": "View Pricelist",
