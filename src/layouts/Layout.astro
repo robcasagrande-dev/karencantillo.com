@@ -36,9 +36,12 @@ const defaultDesc = lang === 'it'
 const pageTitle = title || defaultTitle;
 const pageDesc = description || defaultDesc;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://karencantillo.com');
+const rawPathname = Astro.url.pathname;
+const pathname = rawPathname.endsWith('/') ? rawPathname : `${rawPathname}/`;
 const siteUrl = Astro.site ? Astro.site.origin : 'https://karencantillo.com';
-const pathname = Astro.url.pathname;
+const canonicalURL = new URL(pathname, siteUrl).href;
+
+const isMultilingual = pathname === '/' || pathname === '/es/' || pathname === '/en/';
 const cleanPathname = pathname.replace(/^\/(en|es)(\/|$)/, '/');
 
 const itURL = new URL(cleanPathname, siteUrl).href;
@@ -79,10 +82,19 @@ const offerCatalog = {
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Multilingual Hreflang Tags for SEO -->
-    <link rel="alternate" hreflang="it" href={itURL} />
-    <link rel="alternate" hreflang="es" href={esURL} />
-    <link rel="alternate" hreflang="en" href={enURL} />
-    <link rel="alternate" hreflang="x-default" href={itURL} />
+    {isMultilingual ? (
+      <>
+        <link rel="alternate" hreflang="it" href={itURL} />
+        <link rel="alternate" hreflang="es" href={esURL} />
+        <link rel="alternate" hreflang="en" href={enURL} />
+        <link rel="alternate" hreflang="x-default" href={itURL} />
+      </>
+    ) : (
+      <>
+        <link rel="alternate" hreflang="it" href={canonicalURL} />
+        <link rel="alternate" hreflang="x-default" href={canonicalURL} />
+      </>
+    )}
 
     <!-- SEO Meta Tags -->
     <title>{pageTitle}</title>
@@ -201,9 +213,9 @@ const offerCatalog = {
           <h4>Navigazione & Servizi</h4>
           <ul>
             <li><a href={lang === 'it' ? '/#servizi' : `/${lang}/#servizi`}>{t["nav.prices"]}</a></li>
-            <li><a href="/servizi/extension-ciglia-roma-monteverde">Extension Ciglia Monteverde</a></li>
-            <li><a href="/servizi/laminazione-ciglia-roma-monteverde">Laminazione Ciglia & Sopracciglia</a></li>
-            <li><a href="/servizi/depilazione-viso-roma-monteverde">Depilazione Viso Filo Arabo</a></li>
+            <li><a href="/servizi/extension-ciglia-roma-monteverde/">Extension Ciglia Monteverde</a></li>
+            <li><a href="/servizi/laminazione-ciglia-roma-monteverde/">Laminazione Ciglia & Sopracciglia</a></li>
+            <li><a href="/servizi/depilazione-viso-roma-monteverde/">Depilazione Viso Filo Arabo</a></li>
             <li><a href={lang === 'it' ? '/#clinica' : `/${lang}/#clinica`}>{t["nav.clinic"]}</a></li>
           </ul>
         </div>
