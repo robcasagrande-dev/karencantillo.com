@@ -109,10 +109,10 @@ export const ui = {
       { title: "Architettura & Bio-Henné Sopracciglia", subtitle: "Mappatura geometrica del viso, sagomatura di precisione e riempimento bio-henné per ridefinire ed intensificare le sopracciglia naturali." },
       { title: "Depilazione a Filo, Architettura & Bio-Henné", subtitle: "Definizione dell'arcata con filo arabo di precisione, studio visagistico e sfumatura naturale all'henné bio." },
       { title: "Laminazione Sopracciglia & Visagismo Maturo", subtitle: "Riconfigurazione dell'arcata, riallineamento delle fibre e definizione volumetrica per uno sguardo giovane ed espressivo." },
-      { title: "Visagismo Sopracciglia & Motion Ciglia", subtitle: "Prima in foto e dopo in video: studio visagistico sopraccigliare abbinato a movimento fluido delle ciglia." },
-      { title: "Extension Ciglia Volume Scenografico (Video)", subtitle: "Trasformazione video prima e dopo: ventilazione personalizzata e massima leggerezza delle ciglia." },
-      { title: "Laminazione Ciglia & Cheratina (Video)", subtitle: "Trasformazione video prima e dopo: curvatura naturale, nutrimento cheratinico e tinta scura." },
-      { title: "Depilazione Filo Arabo & Modellamento (Video)", subtitle: "Trasformazione video prima e dopo: pulizia profonda dei contorni ed architettura sopraccigliare." },
+      { title: "Visagismo Sopracciglia & Motion Sopracciglia", subtitle: "Prima in foto e dopo in video: studio visagistico sopraccigliare abbinato a movimento fluido delle sopracciglia." },
+      { title: "Architettura e definizione delle sopracciglia con tecnica di sfumatura naturale", subtitle: "Abbiamo studiato la forma più armoniosa in base ai lineamenti del viso, definendo e valorizzando le sopracciglia con una sfumatura delicata e naturale." },
+      { title: "Laminazione, architettura e design sopracciglia + henné", subtitle: "Un trattamento completo per valorizzare lo sguardo: abbiamo studiato e definito la forma delle sopracciglia in armonia con i lineamenti del viso, completando il look con la laminazione e la colorazione all’henné. Il risultato? Sopracciglia più ordinate, definite e piene, con un effetto naturale e super armonioso." },
+      { title: "Progettazione e Definizione Sopracciglia con Sfumatura Naturale ✨", subtitle: "Creazione di una forma su misura studiata sui lineamenti del viso, per incorniciare lo sguardo con una sfumatura morbida e realistica." },
       { title: "Volume Scenografico & Sguardo 360° (Video)", subtitle: "Trasformazione video prima e dopo: effetto makeup tridimensionale ad alto impatto visivo." }
     ]
   },
@@ -219,10 +219,10 @@ export const ui = {
       { title: "Arquitectura y Bio-Henna de Cejas", subtitle: "Mapeo geométrico facial, perfilado de alta precisión y sombreado con henna orgánica para redefinir e intensificar las cejas naturales." },
       { title: "Depilación con Hilo, Arquitectura y Bio-Henna", subtitle: "Perfilado de precisión con hilo árabe, estudio de visagismo facial y sombreado natural con henna orgánica." },
       { title: "Laminado de Cejas & Visagismo Maduro", subtitle: "Reconfiguración del arco, alineación de fibras y definición volumétrica para una mirada joven y expresiva." },
-      { title: "Visagismo de Cejas & Motion de Pestañas", subtitle: "Antes en foto y después en video: estudio de visagismo superciliar combinado con movimiento fluido de pestañas." },
-      { title: "Extensión de Pestañas Volumen Escenográfico (Video)", subtitle: "Transformación en video antes y después: abanicos personalizados y máxima ligereza." },
-      { title: "Laminado de Pestañas & Queratina (Video)", subtitle: "Transformación en video antes y después: curvatura natural, nutrición con queratina y tinte oscuro." },
-      { title: "Depilación con Hilo Árabe & Perfilado (Video)", subtitle: "Transformación en video antes y después: limpieza profunda de contornos y arquitectura de cejas." },
+      { title: "Visagismo de Cejas & Motion de Cejas", subtitle: "Antes en foto y después en video: estudio de visagismo superciliar combinado con movimiento fluido de cejas." },
+      { title: "Arquitectura y definición de cejas con técnica de sombreado natural", subtitle: "Hemos estudiado la forma más armoniosa en base a los rasgos faciales, definiendo y realzando las cejas con un sombreado delicado y natural." },
+      { title: "Laminado, arquitectura y diseño de cejas + henna", subtitle: "Un tratamiento completo para realzar la mirada: hemos estudiado y definido la forma de las cejas en armonía con los rasgos faciales, completando el look con el laminado y la coloración con henna. ¿El resultado? Cejas más ordenadas, definidas y llenas, con un efecto natural y súper armonioso." },
+      { title: "Diseño y Definición de Cejas con Sombreado Natural ✨", subtitle: "Creación de una forma a medida basada en los rasgos faciales, para enmarcar la mirada con un sombreado suave y realista." },
       { title: "Volumen Escenográfico & Mirada 360° (Video)", subtitle: "Transformación en video antes y después: efecto maquillaje tridimensional de alto impacto visual." }
     ]
   },
@@ -329,10 +329,10 @@ export const ui = {
       { title: "Brow Architecture & Organic Henna Mapping", subtitle: "Precision facial geometric mapping, brow shaping, and organic henna tinting to restore density and define natural eyebrows." },
       { title: "Threading, Brow Architecture & Bio-Henna", subtitle: "Precision Arabic threading hair removal, facial visagism architecture, and organic bio-henna shading." },
       { title: "Brow Lamination & Anti-Aging Visagism", subtitle: "Arch reconfiguration, fiber realignment, and volume definition for a youthful, expressive look." },
-      { title: "Brow Visagism & Motion Lash Design", subtitle: "Before image paired with motion video after: brow facial mapping combined with fluid lash extensions motion." },
-      { title: "Volume Lash Extensions (Video)", subtitle: "Video transformation before and after: custom fan volume set with featherlight comfort." },
-      { title: "Lash Lamination & Keratin (Video)", subtitle: "Video transformation before and after: natural lift, keratin nutrition, and dark tinting." },
-      { title: "Arabic Threading & Brow Shaping (Video)", subtitle: "Video transformation before and after: deep contour cleaning and brow arch design." },
+      { title: "Brow Visagism & Motion Brow Design", subtitle: "Before image paired with motion video after: brow facial mapping combined with fluid brow motion." },
+      { title: "Brow Architecture and Definition with Natural Shading Technique", subtitle: "We studied the most harmonious shape based on facial features, defining and enhancing the brows with a delicate, natural shading." },
+      { title: "Brow lamination, architecture and design + henna", subtitle: "A complete treatment to enhance your look: we studied and defined the brow shape in harmony with facial features, completing the look with lamination and henna tinting. The result? Neater, defined, and fuller brows, with a natural and super harmonious effect." },
+      { title: "Brow Design and Definition with Natural Shading ✨", subtitle: "Custom shape creation tailored to facial features, framing the eyes with a soft and realistic shading." },
       { title: "360° Eye & Lash Volume (Video)", subtitle: "Video transformation before and after: high-impact three-dimensional makeup effect." }
     ]
   }
